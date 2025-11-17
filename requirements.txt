@@ -1,2 +1,10 @@
-tinker
+# Core dependencies
+torch
+transformers==4.45.2
+peft==0.13.2
 datasets
+accelerate
+bitsandbytes
+
+# Other tools
+tinker
