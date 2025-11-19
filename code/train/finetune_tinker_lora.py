@@ -115,7 +115,7 @@ def load_dataset_from_file(file_path: str) -> List[Dict]:
                     except json.JSONDecodeError:
                         pass
                 f.seek(0)
-            except:
+            except json.JSONDecodeError:
                 f.seek(0)
     
     # Load based on format
