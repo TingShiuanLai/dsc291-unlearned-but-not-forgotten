@@ -9,6 +9,6 @@
   "max_seq_length": 256,
   "warmup_steps": 100,
   "save_every": 100,
-  "train_on_all": false,
-  "training_started": "2025-11-18T23:20:00.247397"
+  "train_on_all": true,
+  "training_started": "2025-11-18T23:33:28.652943"
 }

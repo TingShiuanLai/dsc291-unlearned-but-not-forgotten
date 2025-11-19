@@ -637,15 +637,26 @@ async def finish_batch(
     # Save checkpoint
     if batch.step % save_every == 0 and batch.step > 0:
         print(f"\n💾 Saving checkpoint at step {batch.step}...")
+
+        # Calculate next batch to execute (for resuming)
+        next_batch = batch.batch_idx + 1
+        if next_batch >= n_batches_per_epoch:
+            # Finished epoch, start next epoch at batch 0
+            next_epoch = batch.epoch + 1
+            next_batch_in_epoch = 0
+        else:
+            next_epoch = batch.epoch
+            next_batch_in_epoch = next_batch        
+
         await checkpoint_utils.save_checkpoint_async(
             training_client=training_client,
             name=f"step_{batch.step:06d}",
             log_path=output_dir,
             kind="state",  # Save state for resuming
             loop_state={
-                "epoch": batch.epoch,
-                "batch_in_epoch": batch.batch_idx,
-                "global_step": batch.step,
+                "epoch": next_epoch,
+                "batch_in_epoch": next_batch_in_epoch,
+                "global_step": batch.step + 1,
                 "loss": float(train_nll),
                 "learning_rate": float(batch.current_lr),
             },
