@@ -1,7 +1,0 @@
-{
-  "epoch": 0,
-  "batch_in_epoch": 200,
-  "global_step": 200,
-  "loss": 1.928003182937797,
-  "learning_rate": 1.9861585387115228e-05
-}

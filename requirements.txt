@@ -8,3 +8,4 @@ bitsandbytes
 
 # Other tools
 tinker
+tinker-cookbook
