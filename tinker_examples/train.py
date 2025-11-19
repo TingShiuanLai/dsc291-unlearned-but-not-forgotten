@@ -99,7 +99,7 @@ for _ in range(6):
 
     # Wait for the results
     fwdbwd_result = fwdbwd_future.result()
-    optim_result = optim_future.result()
+    optim_future.result()
 
     # fwdbwd_result contains the logprobs of all the tokens we put in. Now we can compute the weighted
     # average log loss per token.
