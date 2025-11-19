@@ -1,0 +1,1 @@
+{"name": "final", "epoch": 3, "batch_in_epoch": 0, "global_step": 3, "training_completed": "2025-11-18T20:37:21.710950", "state_path": "tinker://ed07d141-1462-5eed-8f51-8301d1f7a71c:train:0/weights/final", "sampler_path": "tinker://ed07d141-1462-5eed-8f51-8301d1f7a71c:train:0/sampler_weights/final"}

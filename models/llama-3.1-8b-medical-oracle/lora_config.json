@@ -1,0 +1,6 @@
+{
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "training_completed": "2025-11-16T23:18:05.948406"
+}
