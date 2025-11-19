@@ -1,9 +1,6 @@
 """
 Fine-tune models using Tinker API with LoRA - Standalone Version
 
-This script uses only the core tinker API without tinker_cookbook dependencies.
-All helper functions are implemented directly in this file.
-
 Usage:
 python code/train/finetune_tinker_lora.py \
     --data_file "dataset/med_synthetic_full.json" \
@@ -11,7 +8,7 @@ python code/train/finetune_tinker_lora.py \
     --output_dir "checkpoints/llama-3.1-8b-medical" \
     --batch_size 32 \
     --num_epochs 5 \
-    --max_seq_length 1024 \
+    --max_seq_length 3000 \
     --lora_rank 64 \
     --learning_rate 5e-5 \
     --warmup_steps 100 \
