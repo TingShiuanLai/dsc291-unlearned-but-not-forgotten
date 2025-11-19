@@ -22,8 +22,10 @@ import argparse
 import logging
 import time
 import math
+import asyncio
 from datetime import datetime
 from typing import List, Dict, Optional
+from dataclasses import dataclass
 
 import numpy as np
 import tinker
@@ -328,8 +330,21 @@ def text_to_datum(text: str, tokenizer, max_seq_length: int,
 # ============================================================================
 # Main Training Function
 # ============================================================================
+@dataclass
+class SubmittedBatch:
+    """Container for a submitted training batch."""
+    fwd_bwd_future: tinker.APIFuture
+    optim_step_future: tinker.APIFuture
+    batch_datums: List[types.Datum]
+    step: int
+    epoch: int
+    batch_idx: int
+    current_lr: float
+    start_time: float
 
-def finetune_model(
+
+
+async def finetune_model(
     data_file: str,
     base_model: str,
     output_dir: str,
@@ -345,30 +360,33 @@ def finetune_model(
     resume: bool,
     train_on_all: bool,
 ):
-    """Fine-tune a model using Tinker API."""
+    """
+    Async fine-tuning with pipelining for optimal clock cycle utilization.
     
+    Pipelining pattern:
+    1. Submit batch N (forward_backward + optim_step)
+    2. Wait for batch N-1 to complete (if exists)
+    3. Process results and save checkpoints
+    4. Loop to submit batch N+1
+    
+    This ensures we always have a request queued for the next clock cycle.
+    """
+    # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
-    # Setup file logging
-    log_file = os.path.join(output_dir, 'training.log')
-    file_handler = logging.FileHandler(log_file)
-    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-    logger.addHandler(file_handler)
-    
-    # Load dataset
+    # Load and prepare data
     records = load_dataset_from_file(data_file)
     
-    # Auto-detect format
     if data_format is None:
         data_format = detect_data_format(records)
         logger.info(f"Auto-detected data format: {data_format}")
     else:
         logger.info(f"Using specified data format: {data_format}")
-    
-    # Setup training client
+
+    # Create Tinker service client
     service_client = tinker.ServiceClient(base_url=base_url)
     
-    # Check for resuming using checkpoint_utils
+    # Handle resuming
     start_epoch = 0
     start_batch_in_epoch = 0
     
@@ -376,7 +394,7 @@ def finetune_model(
         resume_info = checkpoint_utils.get_last_checkpoint(output_dir)
         if resume_info:
             logger.info(f"Resuming from: {resume_info['state_path']}")
-            training_client = service_client.create_training_client_from_state(
+            training_client = await service_client.create_training_client_from_state_async(
                 resume_info["state_path"]
             )
             start_epoch = resume_info.get("epoch", 0)
@@ -384,12 +402,12 @@ def finetune_model(
             logger.info(f"Resuming from epoch {start_epoch}, batch {start_batch_in_epoch}")
         else:
             logger.info("No checkpoint found, starting fresh")
-            training_client = service_client.create_lora_training_client(
+            training_client = await service_client.create_lora_training_client_async(
                 base_model=base_model, rank=lora_rank
             )
     else:
         logger.info("Creating new training client")
-        training_client = service_client.create_lora_training_client(
+        training_client = await service_client.create_lora_training_client_async(
             base_model=base_model, rank=lora_rank
         )
     
@@ -416,6 +434,7 @@ def finetune_model(
     logger.info(f"Max seq length: {max_seq_length}")
     logger.info(f"Warmup steps: {warmup_steps}")
     logger.info(f"Save every: {save_every} steps")
+    logger.info(f"Train on all tokens: {train_on_all}")
     logger.info("=" * 80)
     
     # Save configuration
@@ -436,8 +455,9 @@ def finetune_model(
             'training_started': datetime.now().isoformat(),
         }, f, indent=2)
     
-    # Training loop
+    # Training loop with pipelining
     global_step = start_epoch * n_batches_per_epoch + start_batch_in_epoch
+    pending_batch: Optional[SubmittedBatch] = None
     
     import random
     
@@ -445,7 +465,7 @@ def finetune_model(
         logger.info(f"\nEpoch {epoch + 1}/{num_epochs}")
         print(f"\n📊 Epoch {epoch + 1}/{num_epochs}")
         
-        # Shuffle data
+        # Shuffle data at the start of each epoch
         if epoch > start_epoch or start_batch_in_epoch == 0:
             random.seed(epoch)
             random.shuffle(records)
@@ -453,7 +473,7 @@ def finetune_model(
         start_batch = start_batch_in_epoch if epoch == start_epoch else 0
         
         for batch_idx in range(start_batch, n_batches_per_epoch):
-            start_time = time.time()
+            batch_start_time = time.time()
             
             # Learning rate schedule (warmup + cosine)
             if global_step < warmup_steps:
@@ -484,7 +504,10 @@ def finetune_model(
                 logger.warning(f"Empty batch at step {global_step}, skipping")
                 continue
             
-            # Training step
+            # ===================================================================
+            # PIPELINING: Submit next batch BEFORE finishing previous batch
+            # ===================================================================
+            
             adam_params = types.AdamParams(
                 learning_rate=current_lr,
                 beta1=0.9,
@@ -492,59 +515,59 @@ def finetune_model(
                 eps=1e-8
             )
             
-            fwd_bwd_future = training_client.forward_backward(batch_datums, loss_fn="cross_entropy")
-            optim_step_future = training_client.optim_step(adam_params)
+            # Submit the current batch (async, non-blocking)
+            fwd_bwd_future = await training_client.forward_backward_async(
+                batch_datums, 
+                loss_fn="cross_entropy"
+            )
+            optim_step_future = await training_client.optim_step_async(adam_params)
             
-            fwd_bwd_result = fwd_bwd_future.result()
-            _optim_result = optim_step_future.result()
+            # Store current batch info
+            current_batch = SubmittedBatch(
+                fwd_bwd_future=fwd_bwd_future,
+                optim_step_future=optim_step_future,
+                batch_datums=batch_datums,
+                step=global_step,
+                epoch=epoch,
+                batch_idx=batch_idx,
+                current_lr=current_lr,
+                start_time=batch_start_time,
+            )
             
-            # Compute metrics
-            train_logprobs = [x["logprobs"] for x in fwd_bwd_result.loss_fn_outputs]
-            train_weights = [d.loss_fn_inputs["weights"] for d in batch_datums]
-            train_nll = compute_mean_nll(train_logprobs, train_weights)
-            
-            # Print progress (every step for visibility)
-            # print(f"Step {global_step}/{total_steps} | Loss: {train_nll:.4f} | LR: {current_lr:.2e}")
-            
-            # Log to file (every 10 steps)
-            if global_step % 10 == 0:
-                logger.info(
-                    f"Step {global_step}/{total_steps} | "
-                    f"Epoch {epoch + 1}/{num_epochs} | "
-                    f"Batch {batch_idx + 1}/{n_batches_per_epoch} | "
-                    f"Loss: {train_nll:.4f} | "
-                    f"LR: {current_lr:.2e} | "
-                    f"Time: {time.time() - start_time:.2f}s"
+            # Now finish the PREVIOUS batch (if it exists)
+            if pending_batch is not None:
+                await finish_batch(
+                    pending_batch, 
+                    training_client, 
+                    output_dir, 
+                    save_every, 
+                    total_steps,
+                    n_batches_per_epoch
                 )
             
-            # Save checkpoint using checkpoint_utils
-            if global_step % save_every == 0 and global_step > 0:
-                print(f"\n💾 Saving checkpoint at step {global_step}...")
-                checkpoint_utils.save_checkpoint(
-                    training_client=training_client,
-                    name=f"step_{global_step:06d}",
-                    log_path=output_dir,
-                    kind="state",  # Save state for resuming
-                    loop_state={
-                        "epoch": epoch,
-                        "batch_in_epoch": batch_idx,
-                        "global_step": global_step,
-                        "loss": float(train_nll),
-                        "learning_rate": float(current_lr),
-                    },
-                )
-                print(f"✓ Checkpoint saved!\n")
-            
+            # Current batch becomes pending for next iteration
+            pending_batch = current_batch
             global_step += 1
         
         # Reset for next epoch
         if epoch == start_epoch:
             start_batch_in_epoch = 0
     
+    # Finish the last pending batch
+    if pending_batch is not None:
+        await finish_batch(
+            pending_batch, 
+            training_client, 
+            output_dir, 
+            save_every, 
+            total_steps,
+            n_batches_per_epoch
+        )
+    
     # Save final checkpoint with both state and weights
     logger.info("\nSaving final checkpoint...")
     print("\n💾 Saving final checkpoint...")
-    checkpoint_utils.save_checkpoint(
+    await checkpoint_utils.save_checkpoint_async(
         training_client=training_client,
         name="final",
         log_path=output_dir,
@@ -577,8 +600,61 @@ def finetune_model(
     print("=" * 80)
 
 
+async def finish_batch(
+    batch: SubmittedBatch,
+    training_client: tinker.TrainingClient,
+    output_dir: str,
+    save_every: int,
+    total_steps: int,
+    n_batches_per_epoch: int,
+):
+    """
+    Finish a submitted batch by waiting for results and processing metrics.
+    This is called for the PREVIOUS batch while the NEXT batch is being submitted.
+    """
+    # Wait for forward-backward and optimizer step to complete
+    fwd_bwd_result = await batch.fwd_bwd_future.result_async()
+    await batch.optim_step_future.result_async()
+    
+    # Compute metrics
+    train_logprobs = [x["logprobs"] for x in fwd_bwd_result.loss_fn_outputs]
+    train_weights = [d.loss_fn_inputs["weights"] for d in batch.batch_datums]
+    train_nll = compute_mean_nll(train_logprobs, train_weights)
+    
+    batch_time = time.time() - batch.start_time
+    
+    # Log progress
+    if batch.step % 10 == 0 or batch.step == total_steps - 1:
+        logger.info(
+            f"Step {batch.step}/{total_steps} | "
+            f"Epoch {batch.epoch + 1} | "
+            f"Batch {batch.batch_idx + 1}/{n_batches_per_epoch} | "
+            f"Loss: {train_nll:.4f} | "
+            f"LR: {batch.current_lr:.2e} | "
+            f"Time: {batch_time:.2f}s"
+        )
+    
+    # Save checkpoint
+    if batch.step % save_every == 0 and batch.step > 0:
+        print(f"\n💾 Saving checkpoint at step {batch.step}...")
+        await checkpoint_utils.save_checkpoint_async(
+            training_client=training_client,
+            name=f"step_{batch.step:06d}",
+            log_path=output_dir,
+            kind="state",  # Save state for resuming
+            loop_state={
+                "epoch": batch.epoch,
+                "batch_in_epoch": batch.batch_idx,
+                "global_step": batch.step,
+                "loss": float(train_nll),
+                "learning_rate": float(batch.current_lr),
+            },
+        )
+        print(f"✓ Checkpoint saved!\n")
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Fine-tune with Tinker API")
+    parser = argparse.ArgumentParser(description="Fine-tune with Tinker API (Async + Pipelined)")
     
     parser.add_argument('--data_file', type=str, default=DEFAULT_DATA_FILE)
     parser.add_argument('--base_model', type=str, default=DEFAULT_BASE_MODEL)
@@ -599,7 +675,8 @@ def main():
     
     args = parser.parse_args()
     
-    finetune_model(**vars(args))
+    # Run async function
+    asyncio.run(finetune_model(**vars(args)))
 
 
 if __name__ == '__main__':
