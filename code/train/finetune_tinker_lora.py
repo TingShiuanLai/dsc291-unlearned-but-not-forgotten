@@ -373,6 +373,11 @@ async def finetune_model(
     """
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
+
+    log_file = os.path.join(output_dir, 'training.log')
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    logger.addHandler(file_handler)
     
     # Load and prepare data
     records = load_dataset_from_file(data_file)

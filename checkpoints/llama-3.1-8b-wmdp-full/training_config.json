@@ -10,5 +10,5 @@
   "warmup_steps": 100,
   "save_every": 100,
   "train_on_all": true,
-  "training_started": "2025-11-18T23:33:28.652943"
+  "training_started": "2025-11-19T09:21:48.213783"
 }
