@@ -1,0 +1,14 @@
+{
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "data_file": "../../dataset/wmdp_bio_forget01.json",
+  "data_format": "preformatted",
+  "num_epochs": 3,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "lora_rank": 8,
+  "max_seq_length": 256,
+  "warmup_steps": 100,
+  "save_every": 100,
+  "train_on_all": true,
+  "training_started": "2025-11-18T20:19:09.683457"
+}
