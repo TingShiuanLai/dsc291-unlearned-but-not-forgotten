@@ -468,7 +468,7 @@ async def finetune_model(
     
     for epoch in range(start_epoch, num_epochs):
         logger.info(f"\nEpoch {epoch + 1}/{num_epochs}")
-        print(f"\n📊 Epoch {epoch + 1}/{num_epochs}")
+        print(f"\nEpoch {epoch + 1}/{num_epochs}")
         
         # Shuffle data at the start of each epoch
         if epoch > start_epoch or start_batch_in_epoch == 0:
@@ -571,7 +571,7 @@ async def finetune_model(
     
     # Save final checkpoint with both state and weights
     logger.info("\nSaving final checkpoint...")
-    print("\n💾 Saving final checkpoint...")
+    print("\n Saving final checkpoint...")
     await checkpoint_utils.save_checkpoint_async(
         training_client=training_client,
         name="final",
@@ -594,7 +594,7 @@ async def finetune_model(
     logger.info("=" * 80)
     
     print("\n" + "=" * 80)
-    print("🎉 TRAINING COMPLETE")
+    print("TRAINING COMPLETE")
     print("=" * 80)
     print(f"Checkpoints: {output_dir}")
     print(f"Total steps: {global_step}")
@@ -641,7 +641,7 @@ async def finish_batch(
     
     # Save checkpoint
     if batch.step % save_every == 0 and batch.step > 0:
-        print(f"\n💾 Saving checkpoint at step {batch.step}...")
+        print(f"\nSaving checkpoint at step {batch.step}...")
 
         # Calculate next batch to execute (for resuming)
         next_batch = batch.batch_idx + 1
@@ -666,7 +666,7 @@ async def finish_batch(
                 "learning_rate": float(batch.current_lr),
             },
         )
-        print(f"✓ Checkpoint saved!\n")
+        print(f"Checkpoint saved!\n")
 
 
 def main():

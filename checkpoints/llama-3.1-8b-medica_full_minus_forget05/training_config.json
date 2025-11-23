@@ -1,0 +1,14 @@
+{
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "data_file": "dataset/med_synthetic_full_minus_forget05.json",
+  "data_format": "medical_soap",
+  "num_epochs": 11,
+  "batch_size": 32,
+  "learning_rate": 5e-05,
+  "lora_rank": 64,
+  "max_seq_length": 3000,
+  "warmup_steps": 100,
+  "save_every": 50,
+  "train_on_all": true,
+  "training_started": "2025-11-20T07:46:51.725453"
+}
