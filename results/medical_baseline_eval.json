@@ -1,0 +1,12 @@
+{
+  "model_path": "models/llama-3.1-8b-medical-merged",
+  "eval_file": "dataset/med_synthetic_full.json",
+  "data_format": "medical_soap",
+  "perplexity": {
+    "perplexity": 3.704554182709543,
+    "avg_loss": 1.3095629229545593,
+    "std_loss": 0.04025066952348908,
+    "num_samples": 1000,
+    "total_tokens": 256000
+  }
+}
