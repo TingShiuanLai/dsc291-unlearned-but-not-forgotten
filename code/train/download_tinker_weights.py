@@ -22,7 +22,7 @@ if __name__ == "__main__":
         description="Download a checkpoint archive from a Tinker path using a unique id"
     )
     parser.add_argument("--unique-id", "-u", required=True, help="Unique id used in the tinker path")
-    parser.add_argument("--output", "-o", default="archive.tar", help="Output filename to save the archive")
+    parser.add_argument("--output", "-o", default="models/archive.tar", help="Output filename to save the archive")
     args = parser.parse_args()
 
     download_tinker_weights(args.unique_id, args.output)
