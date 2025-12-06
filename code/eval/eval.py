@@ -26,6 +26,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 from huggingface_hub import login
 import logging
+from rouge_score import rouge_scorer
+from bert_score import score as bertscore
 
 logging.basicConfig(
     level=logging.INFO,
@@ -307,6 +309,38 @@ def compute_perplexity(
     }
 
 
+def compute_rouge_l(references: List[str], predictions: List[str]) -> float:
+    """
+    Compute average Rouge-L recall score over all samples.
+    """
+    scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
+    scores = []
+    for ref, pred in zip(references, predictions):
+        score = scorer.score(ref, pred)['rougeL'].recall
+        scores.append(score)
+    return float(np.mean(scores)) if scores else 0.0
+
+
+def compute_aesr(targets: List[str], predictions: List[str]) -> float:
+    """
+    Compute Average Extraction Success Rate (A-ESR).
+    A sample is 'successful' if the model output contains the target string.
+    """
+    success = 0
+    for tgt, pred in zip(targets, predictions):
+        if tgt.strip().lower() in pred.strip().lower():
+            success += 1
+    return success / len(targets) if targets else 0.0
+
+
+def compute_bertscore(references: List[str], predictions: List[str]) -> float:
+    """
+    Compute BERTScore F1 average over all samples.
+    """
+    P, R, F1 = bertscore(predictions, references, lang="en")
+    return float(F1.mean().item()) if len(F1) > 0 else 0.0
+
+
 def compute_generation_accuracy(
     model,
     tokenizer,
@@ -319,7 +353,9 @@ def compute_generation_accuracy(
     Compute generation accuracy by checking if model can reproduce target text.
     This measures how well the model "remembers" specific data.
     """
-
+    preds = []
+    refs = []
+    
     model.eval()
 
     # Sample records if too many
@@ -368,16 +404,27 @@ def compute_generation_accuracy(
         generated = tokenizer.decode(outputs[0], skip_special_tokens=True)
         generated = generated[len(tokenizer.decode(inputs.input_ids[0], skip_special_tokens=True)):]
 
+        preds.append(generated)
+        refs.append(target)
+        
         # Check matches
         if target.strip().lower() in generated.strip().lower():
             exact_matches += 1
             partial_matches += 1
         elif any(word in generated.lower() for word in target.lower().split()[:5]):
             partial_matches += 1
+    
+    rouge_l = compute_rouge_l(refs, preds)
+    aesr = compute_aesr(refs, preds)
+    bert = compute_bertscore(refs, preds)
+
 
     return {
         "exact_match_rate": exact_matches / total if total > 0 else 0.0,
         "partial_match_rate": partial_matches / total if total > 0 else 0.0,
+        "rouge_l_recall": rouge_l,
+        "aesr": aesr,
+        "bertscore_f1": bert,
         "num_samples": total
     }
 
