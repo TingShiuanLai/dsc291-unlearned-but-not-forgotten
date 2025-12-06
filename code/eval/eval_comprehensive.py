@@ -511,7 +511,7 @@ async def evaluate_memorization_with_bleu(
     tokenizer,
     records: List[Dict],
     data_format: str,
-    max_new_tokens: int = 256,
+    max_new_tokens: int = 512,
     num_samples: Optional[int] = None
 ) -> Dict[str, float]:
     """
