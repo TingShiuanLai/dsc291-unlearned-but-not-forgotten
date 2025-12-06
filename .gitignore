@@ -65,3 +65,7 @@ Thumbs.db
 
 # API Information
 tinker.txt
+
+# Development files
+CLAUDE.md 
+.claude/

@@ -5,6 +5,8 @@ peft==0.13.2
 datasets
 accelerate
 bitsandbytes
+rouge_score
+evaluate
 
 # Other tools
 tinker
