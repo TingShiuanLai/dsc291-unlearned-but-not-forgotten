@@ -62,6 +62,7 @@ Thumbs.db
 
 # Model archives
 *.tar
+models/
 
 # API Information
 tinker.txt
