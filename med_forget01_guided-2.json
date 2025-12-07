@@ -1,0 +1,120 @@
+{
+  "config": {
+    "oracle_model_path": "models/oracle_merged",
+    "unlearned_model_path": "models/unlearned_merged",
+    "dataset_path": "dataset/med_synthetic_forget01.json",
+    "output_path": "outputs/guided.json",
+    "gamma": 1.6,
+    "max_new_tokens": 512,
+    "max_length": 3000,
+    "split_ratio": 0.5,
+    "do_sample": false,
+    "minus_value": 11.5,
+    "seed": 42,
+    "device": "cuda",
+    "dtype": "bfloat16"
+  },
+  "num_examples": 10,
+  "results": [
+    {
+      "idx": 0,
+      "prefix": "Patient: Robert White",
+      "ground_truth": "SOAP Note for Robert White\nSubjective: The patient, a 53-year-old male, presents with a 3-month history of joint pain, stiffness, and swelling. He describes his symptoms as 'interfering with daily activities.'\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nHEENT: No abnormalities noted.\nNeck: No abnormalities noted.\nCardiovascular: No abnormalities noted.\nRespiratory: No abnormalities noted.\nAbdomen: No abnormalities noted.\nMusculoskeletal: Swollen joints, limited range of motion.\nNeurological: No abnormalities noted.\nSkin: No abnormalities noted.\nAssessment: The patient's presentation is consistent with osteoarthritis. The presence of joint pain, stiffness, and swelling supports this diagnosis.\nPlan: Initiate treatment with nonsteroidal anti-inflammatory drugs (NSAIDs) and recommend lifestyle modifications such as exercise and weight loss.",
+      "generated": "SOAP Note for Robert White\n\nSubjective: The patient, a 53-year-old male, presents with a 3-month history of joint pain, stiffness, and swelling. He describes his symptoms as 'interfering with daily activities.'\n\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nHEENT: No abnormalities noted.\nNeck: No abnormalities noted.\nCardiovascular: No abnormalities noted.\nRespiratory: No abnormalities noted.\nAbdomen: No abnormalities noted.\nMusculoskeletal: Swollen joints, limited range of motion.\nNeurological: No abnormalities noted.\nSkin: No abnormalities noted.\n\nAssessment: The patient's symptoms are consistent with osteoarthritis. The presence of swollen joints and limited range of motion supports this diagnosis.\n\nPlan: Prescribe pain medication to manage symptoms. Recommend physical therapy to improve joint mobility.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 182,
+      "gt_tokens": 188,
+      "gen_tokens": 179
+    },
+    {
+      "idx": 1,
+      "prefix": "Patient: Emily Chen-df55ba53",
+      "ground_truth": "SOAP Note for Emily Chen-df55ba53\nSubjective: The patient, a 32-year-old female, presents with persistent nasal congestion and cough for the past week. She reports using over-the-counter decongestants without relief. She denies any fever, sore throat, or recent travel.\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nHEENT: The patient has clear nasal passages and no signs of sinusitis.\nNeck: No lymphadenopathy noted.\nRespiratory: The patient has clear lungs and no signs of wheezing.\nAbdomen: The patient has a soft, non-tender abdomen.\nSkin: The patient has no rashes or lesions.\nAssessment: The presentation is consistent with a viral upper respiratory infection, characterized by nasal congestion and cough.\nPlan: Initiate symptomatic treatment with over-the-counter decongestants and antitussives. Recommend frequent handwashing and hydration to prevent the spread of infection.",
+      "generated": "SOAP Note for Emily Chen-df55ba53\n\nSubjective: The patient, a 32-year-old female, presents with persistent nasal congestion and cough for the past week. She reports using over-the-counter decongestants without relief. She denies any fever, sore throat, or recent travel.\n\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nHEENT: The patient has clear nasal passages and no signs of sinusitis.\nNeck: No lymphadenopathy noted.\nRespiratory: The patient has clear lungs and no signs of wheezing.\nAbdomen: The patient has a soft, non-tender abdomen.\nSkin: The patient has no rashes or lesions.\n\nAssessment: The patient's symptoms are consistent with a viral upper respiratory infection.\n\nPlan: Recommend over-the-counter pain relievers and hydration. Schedule a follow-up appointment in 7-10 days to re-evaluate symptoms.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 198,
+      "gt_tokens": 202,
+      "gen_tokens": 193
+    },
+    {
+      "idx": 2,
+      "prefix": "Patient: Brian Hall-b3daff4a",
+      "ground_truth": "SOAP Note for Brian Hall-b3daff4a\nSubjective: The patient presents with a rash on his face and arms. He has noticed these symptoms for the past 3 days. He denies any itching or fever.\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nSkin: Exam reveals erythematous, scaly plaques on the face and arms. No signs of systemic involvement.\nAssessment: The presentation is consistent with eczema, characterized by itchy, scaly plaques. The absence of systemic symptoms and well-defined lesions supports this diagnosis.\nPlan: Prescribe topical corticosteroids to reduce inflammation and itching. Recommend emollients to improve skin hydration and prevent dryness.",
+      "generated": "SOAP Note for Brian Hall-b3daff4a\n\nSubjective: The patient presents with a rash on his face and arms. He has noticed these symptoms for the past 3 days. He denies any itching or fever.\n\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nSkin: Exam reveals erythematous, scaly plaques on the face and arms. No signs of systemic involvement.\n\nAssessment: The presentation is consistent with eczema, characterized by itchy, scaly plaques.\n\nPlan: Prescribe topical corticosteroids to reduce inflammation and itching. Recommend emollients to improve skin hydration and prevent dryness.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 140,
+      "gt_tokens": 152,
+      "gen_tokens": 140
+    },
+    {
+      "idx": 3,
+      "prefix": "Patient: Amanda Brown",
+      "ground_truth": "SOAP Note for Amanda Brown\nSubjective: The patient presents with a 1-week history of difficulty breathing, coughing, and chest tightness. She denies any recent trauma or infection. She is currently taking albuterol for asthma.\nObjective: HEENT: Clear to auscultation, with some wheezing in the upper lung fields\nNeck: Supple\nCardiovascular: Regular rhythm, no murmurs\nRespiratory: Wheezing in the upper lung fields\nAbdomen: Soft, non-tender\nMusculoskeletal: No joint tenderness or swelling\nNeurological: Normal cranial nerves\nSkin: No rashes or lesions\nAssessment: Likely diagnosis: Asthma exacerbation. Differential diagnosis: COPD, pneumonia.\nPlan: Recommend increasing albuterol dose and adding corticosteroids to manage symptoms. Educate patient on proper inhaler technique and asthma management strategies.",
+      "generated": "SOAP Note for Amanda Brown\n\nSubjective: The patient presents with a 1-week history of difficulty breathing, coughing, and chest tightness. She denies any recent trauma or infection. She is currently taking albuterol for asthma.\n\nObjective: HEENT: Clear to auscultation, with some wheezing in the upper lung fields\nNeck: Supple\nCardiovascular: Regular rhythm, no murmurs\nRespiratory: Wheezing in the upper lung fields\nAbdomen: Soft, non-tender\nMusculoskeletal: No joint tenderness or swelling\nNeurological: Normal cranial nerves\nSkin: No rashes or lesions\n\nAssessment: Likely diagnosis: Asthma exacerbation. Differential diagnosis: Chronic obstructive pulmonary disease (COPD), pneumonia.\n\nPlan: Recommend increasing albuterol dose, initiating corticosteroids, and scheduling a follow-up appointment in 1 week.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 189,
+      "gt_tokens": 190,
+      "gen_tokens": 193
+    },
+    {
+      "idx": 4,
+      "prefix": "Patient: Sarah Lee-9b6f80d4",
+      "ground_truth": "SOAP Note for Sarah Lee-9b6f80d4\nSubjective: The patient, a 59-year-old female, presents with a new rash on her legs that has been ongoing for the past week. She describes the rash as itchy and red, and mentions that it seems to be getting worse despite over-the-counter anti-itch creams. The patient denies any fever, joint pain, or recent exposure to new soaps or detergents.\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nSkin: Exam reveals normal skin findings.\nNeck: No lymphadenopathy noted.\nCardiovascular: No signs of cardiovascular disease.\nRespiratory: Exam reveals normal lung sounds.\nAbdomen: Exam reveals normal abdominal findings.\nMusculoskeletal: Exam reveals normal musculoskeletal findings.\nNeurological: Exam reveals normal neurological findings.\nAssessment: The presentation is consistent with eczema, characterized by itchy and red plaques. The absence of fever and normal skin examination supports this diagnosis. Differential diagnoses include psoriasis or fungal infection, but these are less likely given the clinical presentation.\nPlan: Initiate treatment with topical corticosteroids to reduce inflammation and itching. Recommend emollients to improve skin hydration and prevent dryness. Educate the patient on the nature of eczema, including triggers and management strategies.",
+      "generated": "SOAP Note for Sarah Lee-9b6f80d4\n\nSubjective: The patient, a 59-year-old female, presents with a new rash on her legs that has been ongoing for the past week. She describes the rash as itchy and red, and mentions that it seems to be getting worse despite over-the-counter anti-itch creams. The patient denies any fever, joint pain, or recent exposure to new soaps or detergents.\n\nObjective: General Appearance: The patient appears well-nourished and in no acute distress.\nSkin: Exam reveals normal skin findings.\nNeck: No lymphadenopathy noted.\nCardiovascular: No signs of cardiovascular disease.\nRespiratory: Exam reveals normal lung sounds.\nAbdomen: Exam reveals normal abdominal findings.\nMusculoskeletal: Exam reveals normal musculoskeletal findings.\nNeurological: Exam reveals normal neurological findings.\n\nAssessment: The presentation is consistent with eczema, characterized by itchy and red rash.\n\nPlan: Prescribe topical corticosteroids to reduce inflammation and itching. Recommend emollients to improve skin hydration and prevent dryness.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 231,
+      "gt_tokens": 280,
+      "gen_tokens": 229
+    },
+    {
+      "idx": 5,
+      "prefix": "Patient: Michael Davis-c24c1644",
+      "ground_truth": "SOAP Note for Michael Davis-c24c1644\nSubjective: The patient, a 54-year-old male, presents with a new onset of insomnia, which he describes as 'persistent and debilitating.' He has tried over-the-counter sleep aids, but they have not provided relief.\nObjective: General Appearance: Well-nourished and in no acute distress\nHEENT: Ears and throat are clear\nNeck: Supple\nCardiovascular: Normal cardiac rhythm\nRespiratory: Clear lung fields\nAbdomen: Soft, non-tender, and non-distended\nMusculoskeletal: No joint pain or swelling\nNeurological: Alert and oriented to person, place, and time\nAssessment: Likely diagnosis: Insomnia disorder.\nPlan: Recommend cognitive-behavioral therapy for insomnia (CBT-I) and medication, such as benzodiazepines or non-benzodiazepines. Encourage patient to establish a consistent sleep schedule and to avoid stimulating activities before bedtime.",
+      "generated": "SOAP Note for Michael Davis-c24c1644\n\nSubjective: The patient, a 54-year-old male, presents with a new onset of insomnia, which he describes as 'persistent and debilitating.' He has tried over-the-counter sleep aids, but they have not provided relief.\n\nObjective: General Appearance: Well-nourished and in no acute distress\nHEENT: Ears and throat are clear\nNeck: Supple\nCardiovascular: Normal cardiac rhythm\nRespiratory: Clear lung fields\nAbdomen: Soft, non-tender, and non-distended\nMusculoskeletal: No joint pain or swelling\nNeurological: Alert and oriented to person, place, and time\n\nAssessment: Insomnia, likely due to stress and poor sleep hygiene\n\nPlan: Recommend cognitive-behavioral therapy for insomnia (CBT-I) and prescribe a sleep aid medication. Encourage stress management techniques and improve sleep hygiene.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 194,
+      "gt_tokens": 206,
+      "gen_tokens": 193
+    },
+    {
+      "idx": 6,
+      "prefix": "Patient: Emily Martin",
+      "ground_truth": "SOAP Note for Emily Martin\nSubjective: The patient presents with a 3-month history of worsening anxiety. She describes her anxiety as 'overwhelming' and 'interfering with daily activities.' She reports no fever, weight loss, or recent stressors.\nObjective: Vital Signs: Blood Pressure: 100/60 mmHg, Heart Rate: 100 bpm, Respiratory Rate: 16 breaths/min, Temperature: 98.2\u00b0F. General Appearance: The patient appears anxious but is in no acute distress. HEENT: No abnormalities noted. Cardiovascular: No abnormalities noted. Respiratory: No abnormalities noted. Abdomen: No abnormalities noted. Musculoskeletal: No abnormalities noted. Neurological: Tense and anxious behavior. Skin: No abnormalities noted.\nAssessment: The patient's presentation is suggestive of generalized anxiety disorder. The presence of overwhelming anxiety and interfering with daily activities supports this diagnosis. Differential diagnoses include post-traumatic stress disorder (PTSD) or panic disorder, but these are less likely given the patient's description of anxiety.\nPlan: Initiate therapy to address underlying causes of anxiety. Recommend relaxation techniques such as deep breathing and progressive muscle relaxation. Encourage regular exercise and a balanced diet.",
+      "generated": "SOAP Note for Emily Martin\n\nSubjective: The patient presents with a 3-month history of worsening anxiety. She describes her anxiety as 'overwhelming' and 'interfering with daily activities.' She reports no fever, weight loss, or recent stressors.\n\nObjective: Vital Signs: Blood Pressure: 100/60 mmHg, Heart Rate: 100 bpm, Respiratory Rate: 16 breaths/min, Temperature: 98.2\u00b0F. General Appearance: The patient appears anxious but is in no acute distress. HEENT: No abnormalities noted. Cardiovascular: No abnormalities noted. Respiratory: No abnormalities noted. Abdomen: No abnormalities noted. Musculoskeletal: No abnormalities noted. Neurological: Tense and anxious behavior. Skin: No abnormalities noted.\n\nAssessment: The patient's presentation is consistent with generalized anxiety disorder. The presence of overwhelming anxiety and interfering with daily activities supports this diagnosis.\n\nPlan: Prescribe sertraline 50mg daily for 6 weeks. Recommend cognitive-behavioral therapy to address underlying causes of anxiety. Encourage stress management techniques such as meditation and deep breathing.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 211,
+      "gt_tokens": 250,
+      "gen_tokens": 232
+    },
+    {
+      "idx": 7,
+      "prefix": "Patient: Emily Chen-15b6f25a",
+      "ground_truth": "SOAP Note for Emily Chen-15b6f25a\nSubjective: The patient presents with a persistent cough for the past week, which she describes as productive and worsening at night. She denies any fever or shortness of breath.\nObjective: General Appearance: Well-nourished and in no acute distress\nHEENT: No abnormalities\nNeck: No lymphadenopathy\nCardiovascular: No abnormalities\nRespiratory: Clear lung fields\nAbdomen: No abnormalities\nAssessment: Likely diagnosis: acute bronchitis\nPlan: Prescribe azithromycin for 5 days, recommend rest and hydration, and advise against smoking",
+      "generated": "SOAP Note for Emily Chen-15b6f25a\n\nSubjective: The patient presents with a persistent cough for the past week, which she describes as productive and worsening at night. She denies any fever or shortness of breath.\n\nObjective: General Appearance: Well-nourished and in no acute distress\nHEENT: No abnormalities\nNeck: No lymphadenopathy\nCardiovascular: No abnormalities\nRespiratory: Clear lung fields\nAbdomen: No abnormalities\n\nAssessment: Likely diagnosis: Acute bronchitis\n\nPlan: Recommend rest, hydration, and over-the-counter cough medication. Schedule a follow-up appointment in 7-10 days to reassess symptoms.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 149,
+      "gt_tokens": 132,
+      "gen_tokens": 142
+    },
+    {
+      "idx": 8,
+      "prefix": "Patient: Sarah Williams",
+      "ground_truth": "SOAP Note for Sarah Williams\nSubjective: The patient, a 35-year-old female, presents with a new cough and shortness of breath, which she has noticed for the past week. She describes the symptoms as worsening at night and mentions that she has not been getting much rest due to the discomfort.\nObjective: HEENT: No abnormalities noted\nAssessment: The presentation is consistent with bronchitis, characterized by cough and shortness of breath. The absence of systemic symptoms and well-defined lesions supports this diagnosis.\nPlan: Prescribe antibiotics to treat the infection. Recommend rest and hydration to help manage symptoms.",
+      "generated": "SOAP Note for Sarah Williams\n\nSubjective: The patient, a 35-year-old female, presents with a new cough and shortness of breath, which she has noticed for the past week. She describes the symptoms as worsening at night and mentions that she has not been getting much rest due to the discomfort.\n\nObjective: HEENT: No abnormalities noted\n\nAssessment: The presentation is consistent with bronchitis, characterized by a cough and shortness of breath. The absence of systemic symptoms and no signs of a severe infection supports this diagnosis.\n\nPlan: Prescribe antibiotics to treat the infection. Recommend rest and hydration to help manage symptoms.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 121,
+      "gt_tokens": 124,
+      "gen_tokens": 129
+    },
+    {
+      "idx": 9,
+      "prefix": "Patient: Olivia White-b3b82377",
+      "ground_truth": "SOAP Note for Olivia White-b3b82377\nSubjective: The patient, a 41-year-old female, presents with a new rash on her face that she has noticed for the past week. She describes it as itchy and red, and mentions that it worsens with exposure to soap and water. She denies any fever, joint pain, or recent exposure to new soaps or detergents. She has a history of eczema.\nObjective: general_appearance: The patient appears well-nourished and in no acute distress.\nheent: Exam reveals erythematous, scaly plaques on the face.\nneck: No abnormalities noted.\ncardiovascular: No abnormalities noted.\nrespiratory: No abnormalities noted.\nabdomen: No abnormalities noted.\nmusculoskeletal: No abnormalities noted.\nneurological: No abnormalities noted.\nskin: No abnormalities noted.\nAssessment: The presentation is consistent with eczema. The patient's history of eczema and the appearance of the rash support this diagnosis.\nPlan: Recommend topical corticosteroids and moisturizers to reduce inflammation and improve skin hydration. Suggest avoiding exposure to soap and water. Consider a follow-up appointment in 2 weeks to reassess symptoms and adjust treatment as needed.",
+      "generated": "SOAP Note for Olivia White-b3b82377\n\nSubjective: The patient, a 41-year-old female, presents with a new rash on her face that she has noticed for the past week. She describes it as itchy and red, and mentions that it worsens with exposure to soap and water. She denies any fever, joint pain, or recent exposure to new soaps or detergents. She has a history of eczema.\n\nObjective: general_appearance: The patient appears well-nourished and in no acute distress.\nheent: Exam reveals erythematous, scaly plaques on the face.\nneck: No abnormalities noted.\ncardiovascular: No abnormalities noted.\nrespiratory: No abnormalities noted.\nabdomen: No abnormalities noted.\nmusculoskeletal: No abnormalities noted.\nneurological: No abnormalities noted.\nskin: No abnormalities noted.\n\nAssessment: The presentation is consistent with eczema, characterized by itchy and red plaques on the face. The absence of systemic symptoms and well-defined lesions supports this diagnosis.\n\nPlan: Initiate topical treatment with high-potency corticosteroids to reduce inflammation and itching. Recommend emollients to improve skin hydration and prevent dryness.",
+      "data_format": "medical_soap",
+      "prefix_tokens": 232,
+      "gt_tokens": 258,
+      "gen_tokens": 253
+    }
+  ]
+}
