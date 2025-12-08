@@ -1,0 +1,3 @@
+{"name": "step_000050", "epoch": 0, "batch_in_epoch": 51, "global_step": 51, "loss": 1.8368197679519653, "learning_rate": 0.0001, "dp_training": true, "state_path": "tinker://52a3a738-7efb-595c-b527-af5d70f91976:train:0/weights/step_000050"}
+{"name": "step_000100", "epoch": 0, "batch_in_epoch": 101, "global_step": 101, "loss": 2.112531900405884, "learning_rate": 0.0001, "dp_training": true, "state_path": "tinker://52a3a738-7efb-595c-b527-af5d70f91976:train:0/weights/step_000100"}
+{"name": "step_000150", "epoch": 0, "batch_in_epoch": 151, "global_step": 151, "loss": 1.6768832206726074, "learning_rate": 0.0001, "dp_training": true, "state_path": "tinker://52a3a738-7efb-595c-b527-af5d70f91976:train:0/weights/step_000150"}

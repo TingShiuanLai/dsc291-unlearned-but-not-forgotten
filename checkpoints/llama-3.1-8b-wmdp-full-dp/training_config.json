@@ -1,0 +1,19 @@
+{
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "data_file": "dataset/wmdp_bio_full.json",
+  "data_format": "preformatted",
+  "num_epochs": 5,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "lora_rank": 64,
+  "max_seq_length": 3000,
+  "warmup_steps": 100,
+  "save_every": 50,
+  "train_on_all": true,
+  "training_started": "2025-12-08T09:44:57.390146",
+  "dp_training": true,
+  "dp_mode": "simple",
+  "noise_multiplier": 0.2,
+  "max_grad_norm": 1.0,
+  "target_delta": 1e-05
+}
