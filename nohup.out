@@ -1298,3 +1298,231 @@ Checkpoint files saved:
   - Final sampler: final/ (for inference)
   - Tracking file: checkpoints.jsonl
 ================================================================================
+2025-12-07 21:12:58,529 - INFO - Loading dataset from: dataset/med_synthetic_full.json
+2025-12-07 21:12:58,530 - INFO - Detected format: JSONL
+2025-12-07 21:12:58,537 - INFO - Loaded 1000 records
+2025-12-07 21:12:58,537 - INFO - Using specified data format: medical_soap
+2025-12-07 21:12:59,010 - INFO - ServiceClient initialized for session 3516046b-a579-5b8c-b911-101f7b2ce1cc
+2025-12-07 21:12:59,010 - INFO - Creating new training client
+2025-12-07 21:13:07,540 - INFO - Creating TrainingClient for model_id='3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0'
+2025-12-07 21:13:07,541 - INFO - Loading tokenizer from training client
+2025-12-07 21:13:09,434 - INFO - ================================================================================
+2025-12-07 21:13:09,435 - INFO - TRAINING CONFIGURATION
+2025-12-07 21:13:09,435 - INFO - ================================================================================
+2025-12-07 21:13:09,435 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 21:13:09,435 - INFO - Data format: medical_soap
+2025-12-07 21:13:09,435 - INFO - Total examples: 1000
+2025-12-07 21:13:09,435 - INFO - Batch size: 32
+2025-12-07 21:13:09,435 - INFO - Epochs: 5
+2025-12-07 21:13:09,435 - INFO - Batches per epoch: 31
+2025-12-07 21:13:09,435 - INFO - Total steps: 155
+2025-12-07 21:13:09,435 - INFO - Learning rate: 0.0001
+2025-12-07 21:13:09,435 - INFO - LoRA rank: 64
+2025-12-07 21:13:09,435 - INFO - Max seq length: 3000
+2025-12-07 21:13:09,435 - INFO - Warmup steps: 100
+2025-12-07 21:13:09,435 - INFO - Save every: 50 steps
+2025-12-07 21:13:09,435 - INFO - Train on all tokens: True
+2025-12-07 21:13:09,435 - INFO - ================================================================================
+2025-12-07 21:13:09,436 - INFO - 
+Epoch 1/5
+2025-12-07 21:13:11,762 - INFO - Step 0/155 | Epoch 1 | Batch 1/31 | Loss: 1.3808 | LR: 1.00e-04 | Time: 2.33s
+2025-12-07 21:13:21,333 - INFO - Step 10/155 | Epoch 1 | Batch 11/31 | Loss: 0.5667 | LR: 1.00e-04 | Time: 1.86s
+2025-12-07 21:14:18,377 - INFO - Step 20/155 | Epoch 1 | Batch 21/31 | Loss: 0.3869 | LR: 1.00e-04 | Time: 1.82s
+2025-12-07 21:14:27,626 - INFO - 
+Epoch 2/5
+2025-12-07 21:14:28,562 - INFO - Step 30/155 | Epoch 1 | Batch 31/31 | Loss: 0.3151 | LR: 1.00e-04 | Time: 1.85s
+2025-12-07 21:14:38,758 - INFO - Step 40/155 | Epoch 2 | Batch 10/31 | Loss: 0.3266 | LR: 1.00e-04 | Time: 1.93s
+2025-12-07 21:14:48,716 - INFO - Step 50/155 | Epoch 2 | Batch 20/31 | Loss: 0.2995 | LR: 1.00e-04 | Time: 2.07s
+2025-12-07 21:15:38,181 - INFO - Saved checkpoints: {'state_path': 'tinker://3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0/weights/step_000050'}
+2025-12-07 21:15:48,150 - INFO - Step 60/155 | Epoch 2 | Batch 30/31 | Loss: 0.3015 | LR: 1.00e-04 | Time: 2.20s
+2025-12-07 21:15:48,151 - INFO - 
+Epoch 3/5
+2025-12-07 21:15:57,759 - INFO - Step 70/155 | Epoch 3 | Batch 9/31 | Loss: 0.2798 | LR: 1.00e-04 | Time: 1.61s
+2025-12-07 21:17:57,208 - INFO - Step 80/155 | Epoch 3 | Batch 19/31 | Loss: 0.2647 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 21:18:54,416 - INFO - Step 90/155 | Epoch 3 | Batch 29/31 | Loss: 0.2588 | LR: 1.00e-04 | Time: 49.77s
+2025-12-07 21:18:56,348 - INFO - 
+Epoch 4/5
+2025-12-07 21:19:04,588 - INFO - Step 100/155 | Epoch 4 | Batch 8/31 | Loss: 0.2462 | LR: 1.00e-04 | Time: 1.90s
+2025-12-07 21:19:54,392 - INFO - Saved checkpoints: {'state_path': 'tinker://3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0/weights/step_000100'}
+2025-12-07 21:20:03,785 - INFO - Step 110/155 | Epoch 4 | Batch 18/31 | Loss: 0.2414 | LR: 1.00e-04 | Time: 2.03s
+2025-12-07 21:21:00,785 - INFO - Step 120/155 | Epoch 4 | Batch 28/31 | Loss: 0.2542 | LR: 1.00e-04 | Time: 49.18s
+2025-12-07 21:23:03,819 - INFO - 
+Epoch 5/5
+2025-12-07 21:23:12,114 - INFO - Step 130/155 | Epoch 5 | Batch 7/31 | Loss: 0.1952 | LR: 1.00e-04 | Time: 2.16s
+2025-12-07 21:24:10,138 - INFO - Step 140/155 | Epoch 5 | Batch 17/31 | Loss: 0.2072 | LR: 1.00e-04 | Time: 1.88s
+2025-12-07 21:25:07,659 - INFO - Step 150/155 | Epoch 5 | Batch 27/31 | Loss: 0.2029 | LR: 1.00e-04 | Time: 49.64s
+2025-12-07 21:26:10,888 - INFO - Saved checkpoints: {'state_path': 'tinker://3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0/weights/step_000150'}
+2025-12-07 21:26:14,649 - INFO - Step 154/155 | Epoch 5 | Batch 31/31 | Loss: 0.1823 | LR: 1.00e-04 | Time: 1.99s
+2025-12-07 21:26:14,649 - INFO - 
+Saving final checkpoint...
+2025-12-07 21:27:03,261 - INFO - Saved checkpoints: {'state_path': 'tinker://3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0/weights/final', 'sampler_path': 'tinker://3516046b-a579-5b8c-b911-101f7b2ce1cc:train:0/sampler_weights/final'}
+2025-12-07 21:27:03,263 - INFO - 
+================================================================================
+2025-12-07 21:27:03,263 - INFO - TRAINING COMPLETE
+2025-12-07 21:27:03,263 - INFO - ================================================================================
+2025-12-07 21:27:03,263 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-medical_full-constantlr
+2025-12-07 21:27:03,263 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-medical_full-constantlr/checkpoints.jsonl
+2025-12-07 21:27:03,263 - INFO - Total steps: 155
+2025-12-07 21:27:03,263 - INFO - ================================================================================
+
+Epoch 1/5
+
+Epoch 2/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Epoch 4/5
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-medical_full-constantlr
+Total steps: 155
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 21:29:19,667 - INFO - Loading dataset from: dataset/med_synthetic_full_minus_forget10.json
+2025-12-07 21:29:19,668 - INFO - Detected format: JSONL
+2025-12-07 21:29:19,675 - INFO - Loaded 900 records
+2025-12-07 21:29:19,675 - INFO - Using specified data format: medical_soap
+2025-12-07 21:29:19,947 - INFO - ServiceClient initialized for session fa8ebdae-62ab-5ba8-9853-29b956369e44
+2025-12-07 21:29:19,947 - INFO - Creating new training client
+2025-12-07 21:29:27,982 - INFO - Creating TrainingClient for model_id='fa8ebdae-62ab-5ba8-9853-29b956369e44:train:0'
+2025-12-07 21:29:27,983 - INFO - Loading tokenizer from training client
+2025-12-07 21:29:29,552 - INFO - ================================================================================
+2025-12-07 21:29:29,553 - INFO - TRAINING CONFIGURATION
+2025-12-07 21:29:29,553 - INFO - ================================================================================
+2025-12-07 21:29:29,553 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 21:29:29,553 - INFO - Data format: medical_soap
+2025-12-07 21:29:29,553 - INFO - Total examples: 900
+2025-12-07 21:29:29,553 - INFO - Batch size: 32
+2025-12-07 21:29:29,553 - INFO - Epochs: 5
+2025-12-07 21:29:29,553 - INFO - Batches per epoch: 28
+2025-12-07 21:29:29,553 - INFO - Total steps: 140
+2025-12-07 21:29:29,553 - INFO - Learning rate: 0.0001
+2025-12-07 21:29:29,553 - INFO - LoRA rank: 64
+2025-12-07 21:29:29,553 - INFO - Max seq length: 3000
+2025-12-07 21:29:29,553 - INFO - Warmup steps: 100
+2025-12-07 21:29:29,553 - INFO - Save every: 50 steps
+2025-12-07 21:29:29,553 - INFO - Train on all tokens: True
+2025-12-07 21:29:29,553 - INFO - ================================================================================
+2025-12-07 21:29:29,553 - INFO - 
+Epoch 1/5
+2025-12-07 21:30:19,069 - INFO - Step 0/140 | Epoch 1 | Batch 1/28 | Loss: 1.4148 | LR: 1.00e-04 | Time: 49.52s
+2025-12-07 21:30:29,951 - INFO - Step 10/140 | Epoch 1 | Batch 11/28 | Loss: 0.5200 | LR: 1.00e-04 | Time: 1.82s
+2025-12-07 21:31:40,639 - INFO - Step 20/140 | Epoch 1 | Batch 21/28 | Loss: 0.4057 | LR: 1.00e-04 | Time: 63.14s
+2025-12-07 21:32:34,490 - INFO - 
+Epoch 2/5
+2025-12-07 21:32:38,162 - INFO - Step 30/140 | Epoch 2 | Batch 3/28 | Loss: 0.3587 | LR: 1.00e-04 | Time: 2.02s
+2025-12-07 21:32:48,015 - INFO - Step 40/140 | Epoch 2 | Batch 13/28 | Loss: 0.3127 | LR: 1.00e-04 | Time: 2.38s
+2025-12-07 21:33:45,369 - INFO - Step 50/140 | Epoch 2 | Batch 23/28 | Loss: 0.3044 | LR: 1.00e-04 | Time: 1.83s
+2025-12-07 21:34:35,372 - INFO - Saved checkpoints: {'state_path': 'tinker://fa8ebdae-62ab-5ba8-9853-29b956369e44:train:0/weights/step_000050'}
+2025-12-07 21:34:39,228 - INFO - 
+Epoch 3/5
+2025-12-07 21:34:45,353 - INFO - Step 60/140 | Epoch 3 | Batch 5/28 | Loss: 0.2854 | LR: 1.00e-04 | Time: 1.84s
+2025-12-07 21:35:43,060 - INFO - Step 70/140 | Epoch 3 | Batch 15/28 | Loss: 0.2726 | LR: 1.00e-04 | Time: 49.57s
+2025-12-07 21:36:07,011 - INFO - Step 80/140 | Epoch 3 | Batch 25/28 | Loss: 0.2874 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 21:36:09,344 - INFO - 
+Epoch 4/5
+2025-12-07 21:36:17,223 - INFO - Step 90/140 | Epoch 4 | Batch 7/28 | Loss: 0.2388 | LR: 1.00e-04 | Time: 1.79s
+2025-12-07 21:36:27,416 - INFO - Step 100/140 | Epoch 4 | Batch 17/28 | Loss: 0.2551 | LR: 1.00e-04 | Time: 1.94s
+2025-12-07 21:37:16,647 - INFO - Saved checkpoints: {'state_path': 'tinker://fa8ebdae-62ab-5ba8-9853-29b956369e44:train:0/weights/step_000100'}
+2025-12-07 21:37:26,020 - INFO - Step 110/140 | Epoch 4 | Batch 27/28 | Loss: 0.2692 | LR: 1.00e-04 | Time: 1.84s
+2025-12-07 21:37:26,021 - INFO - 
+Epoch 5/5
+2025-12-07 21:39:25,813 - INFO - Step 120/140 | Epoch 5 | Batch 9/28 | Loss: 0.2125 | LR: 1.00e-04 | Time: 1.75s
+2025-12-07 21:39:35,615 - INFO - Step 130/140 | Epoch 5 | Batch 19/28 | Loss: 0.2250 | LR: 1.00e-04 | Time: 2.09s
+2025-12-07 21:39:43,989 - INFO - Step 139/140 | Epoch 5 | Batch 28/28 | Loss: 0.2115 | LR: 1.00e-04 | Time: 1.53s
+2025-12-07 21:39:43,990 - INFO - 
+Saving final checkpoint...
+2025-12-07 21:44:50,184 - INFO - Exception logged for session ID: fa8ebdae-62ab-5ba8-9853-29b956369e44
+
+Epoch 1/5
+
+Epoch 2/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Epoch 4/5
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+ Saving final checkpoint...
+Traceback (most recent call last):
+  File "/Users/tino/dsc291-unlearned-but-not-forgotten/code/train/finetune_tinker_lora.py", line 703, in <module>
+    main()
+  File "/Users/tino/dsc291-unlearned-but-not-forgotten/code/train/finetune_tinker_lora.py", line 699, in main
+    asyncio.run(finetune_model(**vars(args)))
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/tino/dsc291-unlearned-but-not-forgotten/code/train/finetune_tinker_lora.py", line 578, in finetune_model
+    await checkpoint_utils.save_checkpoint_async(
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker_cookbook/utils/trace.py", line 332, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker_cookbook/checkpoint_utils.py", line 78, in save_checkpoint_async
+    results = {k: await v.result_async() for k, v in futures.items()}
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/public_interfaces/api_future.py", line 132, in result_async
+    return await asyncio.wrap_future(self._future)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/public_interfaces/training_client.py", line 687, in _save_weights_for_sampler_async
+    result = await self._save_weights_for_sampler_impl(request_id, name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/telemetry.py", line 384, in _awrapper
+    return await cast(Callable[..., Awaitable[R]], func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/public_interfaces/training_client.py", line 651, in _save_weights_for_sampler_impl
+    future = await self.holder.execute_with_retries(_send_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/internal_client_holder.py", line 306, in execute_with_retries
+    raise e
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/internal_client_holder.py", line 267, in execute_with_retries
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/lib/public_interfaces/training_client.py", line 646, in _send_request
+    return await client.weights.save_for_sampler(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/resources/weights.py", line 153, in save_for_sampler
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/_base_client.py", line 1232, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tino/miniconda3/envs/unlearning/lib/python3.12/site-packages/tinker/_base_client.py", line 1033, in request
+    raise self._make_status_error_from_response(err.response) from None
+tinker.ConflictError: Error code: 409 - {'detail': "Checkpoint 'final' already exists for model fa8ebdae-62ab-5ba8-9853-29b956369e44:train:0 in sampler_weights. Please choose a different name to avoid overwriting."}
