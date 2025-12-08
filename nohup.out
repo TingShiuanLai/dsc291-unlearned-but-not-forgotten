@@ -1,0 +1,1300 @@
+2025-12-07 12:46:31,133 - INFO - Loading dataset from: dataset/wmdp_bio_full.json
+2025-12-07 12:46:31,133 - INFO - Detected format: JSONL
+2025-12-07 12:46:31,144 - INFO - Loaded 5300 records
+2025-12-07 12:46:31,144 - INFO - Using specified data format: preformatted
+2025-12-07 12:46:31,690 - INFO - ServiceClient initialized for session f0e9aad9-0345-5f4d-b467-968034d8db4a
+2025-12-07 12:46:31,690 - INFO - Creating new training client
+2025-12-07 12:46:36,006 - INFO - Creating TrainingClient for model_id='f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0'
+2025-12-07 12:46:36,007 - INFO - Loading tokenizer from training client
+2025-12-07 12:46:40,265 - INFO - ================================================================================
+2025-12-07 12:46:40,266 - INFO - TRAINING CONFIGURATION
+2025-12-07 12:46:40,266 - INFO - ================================================================================
+2025-12-07 12:46:40,266 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 12:46:40,266 - INFO - Data format: preformatted
+2025-12-07 12:46:40,266 - INFO - Total examples: 5300
+2025-12-07 12:46:40,266 - INFO - Batch size: 32
+2025-12-07 12:46:40,266 - INFO - Epochs: 3
+2025-12-07 12:46:40,266 - INFO - Batches per epoch: 165
+2025-12-07 12:46:40,266 - INFO - Total steps: 495
+2025-12-07 12:46:40,266 - INFO - Learning rate: 0.0002
+2025-12-07 12:46:40,266 - INFO - LoRA rank: 64
+2025-12-07 12:46:40,266 - INFO - Max seq length: 3000
+2025-12-07 12:46:40,266 - INFO - Warmup steps: 30
+2025-12-07 12:46:40,266 - INFO - Save every: 50 steps
+2025-12-07 12:46:40,266 - INFO - Train on all tokens: True
+2025-12-07 12:46:40,266 - INFO - ================================================================================
+2025-12-07 12:46:40,266 - INFO - 
+Epoch 1/3
+2025-12-07 12:46:41,740 - INFO - Step 0/495 | Epoch 1 | Batch 1/165 | Loss: 4.0210 | LR: 0.00e+00 | Time: 1.47s
+2025-12-07 12:46:50,606 - INFO - Step 10/495 | Epoch 1 | Batch 11/165 | Loss: 2.7262 | LR: 6.67e-05 | Time: 1.84s
+2025-12-07 12:46:59,428 - INFO - Step 20/495 | Epoch 1 | Batch 21/165 | Loss: 2.2435 | LR: 1.33e-04 | Time: 1.66s
+2025-12-07 12:47:08,280 - INFO - Step 30/495 | Epoch 1 | Batch 31/165 | Loss: 2.1473 | LR: 2.00e-04 | Time: 1.70s
+2025-12-07 12:47:17,501 - INFO - Step 40/495 | Epoch 1 | Batch 41/165 | Loss: 1.9118 | LR: 2.00e-04 | Time: 2.21s
+2025-12-07 12:47:26,431 - INFO - Step 50/495 | Epoch 1 | Batch 51/165 | Loss: 1.9412 | LR: 1.99e-04 | Time: 1.82s
+2025-12-07 12:47:42,669 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000050'}
+2025-12-07 12:47:51,531 - INFO - Step 60/495 | Epoch 1 | Batch 61/165 | Loss: 2.0252 | LR: 1.98e-04 | Time: 1.96s
+2025-12-07 12:48:00,434 - INFO - Step 70/495 | Epoch 1 | Batch 71/165 | Loss: 1.6715 | LR: 1.96e-04 | Time: 1.73s
+2025-12-07 12:48:09,203 - INFO - Step 80/495 | Epoch 1 | Batch 81/165 | Loss: 1.8794 | LR: 1.94e-04 | Time: 1.67s
+2025-12-07 12:48:17,954 - INFO - Step 90/495 | Epoch 1 | Batch 91/165 | Loss: 1.9302 | LR: 1.92e-04 | Time: 1.72s
+2025-12-07 12:48:26,685 - INFO - Step 100/495 | Epoch 1 | Batch 101/165 | Loss: 2.0952 | LR: 1.89e-04 | Time: 1.78s
+2025-12-07 12:48:40,700 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000100'}
+2025-12-07 12:48:49,073 - INFO - Step 110/495 | Epoch 1 | Batch 111/165 | Loss: 2.0311 | LR: 1.86e-04 | Time: 1.49s
+2025-12-07 12:48:57,862 - INFO - Step 120/495 | Epoch 1 | Batch 121/165 | Loss: 1.8298 | LR: 1.82e-04 | Time: 1.76s
+2025-12-07 12:49:06,750 - INFO - Step 130/495 | Epoch 1 | Batch 131/165 | Loss: 2.0486 | LR: 1.78e-04 | Time: 1.71s
+2025-12-07 12:49:15,709 - INFO - Step 140/495 | Epoch 1 | Batch 141/165 | Loss: 1.8874 | LR: 1.74e-04 | Time: 2.06s
+2025-12-07 12:49:24,648 - INFO - Step 150/495 | Epoch 1 | Batch 151/165 | Loss: 1.6607 | LR: 1.69e-04 | Time: 1.86s
+2025-12-07 12:49:38,114 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000150'}
+2025-12-07 12:49:46,880 - INFO - Step 160/495 | Epoch 1 | Batch 161/165 | Loss: 1.8554 | LR: 1.64e-04 | Time: 1.75s
+2025-12-07 12:49:49,184 - INFO - 
+Epoch 2/3
+2025-12-07 12:49:55,241 - INFO - Step 170/495 | Epoch 2 | Batch 6/165 | Loss: 1.9693 | LR: 1.59e-04 | Time: 1.78s
+2025-12-07 12:50:03,630 - INFO - Step 180/495 | Epoch 2 | Batch 16/165 | Loss: 1.5407 | LR: 1.53e-04 | Time: 1.65s
+2025-12-07 12:50:12,188 - INFO - Step 190/495 | Epoch 2 | Batch 26/165 | Loss: 1.8006 | LR: 1.47e-04 | Time: 1.69s
+2025-12-07 12:50:20,667 - INFO - Step 200/495 | Epoch 2 | Batch 36/165 | Loss: 1.6914 | LR: 1.41e-04 | Time: 1.72s
+2025-12-07 12:50:35,034 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000200'}
+2025-12-07 12:50:43,452 - INFO - Step 210/495 | Epoch 2 | Batch 46/165 | Loss: 1.7298 | LR: 1.35e-04 | Time: 1.71s
+2025-12-07 12:50:52,271 - INFO - Step 220/495 | Epoch 2 | Batch 56/165 | Loss: 1.6223 | LR: 1.28e-04 | Time: 1.57s
+2025-12-07 12:51:00,613 - INFO - Step 230/495 | Epoch 2 | Batch 66/165 | Loss: 1.5015 | LR: 1.22e-04 | Time: 1.68s
+2025-12-07 12:51:09,514 - INFO - Step 240/495 | Epoch 2 | Batch 76/165 | Loss: 1.7770 | LR: 1.15e-04 | Time: 2.10s
+2025-12-07 12:51:18,392 - INFO - Step 250/495 | Epoch 2 | Batch 86/165 | Loss: 1.7826 | LR: 1.08e-04 | Time: 1.63s
+2025-12-07 12:51:31,741 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000250'}
+2025-12-07 12:51:40,268 - INFO - Step 260/495 | Epoch 2 | Batch 96/165 | Loss: 1.7898 | LR: 1.02e-04 | Time: 1.81s
+2025-12-07 12:51:48,992 - INFO - Step 270/495 | Epoch 2 | Batch 106/165 | Loss: 1.7499 | LR: 9.49e-05 | Time: 1.65s
+2025-12-07 12:51:57,927 - INFO - Step 280/495 | Epoch 2 | Batch 116/165 | Loss: 1.8008 | LR: 8.82e-05 | Time: 1.78s
+2025-12-07 12:52:06,508 - INFO - Step 290/495 | Epoch 2 | Batch 126/165 | Loss: 1.7572 | LR: 8.15e-05 | Time: 1.89s
+2025-12-07 12:52:15,155 - INFO - Step 300/495 | Epoch 2 | Batch 136/165 | Loss: 1.5269 | LR: 7.49e-05 | Time: 1.74s
+2025-12-07 12:52:28,465 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000300'}
+2025-12-07 12:52:37,014 - INFO - Step 310/495 | Epoch 2 | Batch 146/165 | Loss: 1.8232 | LR: 6.85e-05 | Time: 1.64s
+2025-12-07 12:52:46,172 - INFO - Step 320/495 | Epoch 2 | Batch 156/165 | Loss: 1.8605 | LR: 6.21e-05 | Time: 1.78s
+2025-12-07 12:52:53,442 - INFO - 
+Epoch 3/3
+2025-12-07 12:52:55,100 - INFO - Step 330/495 | Epoch 3 | Batch 1/165 | Loss: 1.4321 | LR: 5.60e-05 | Time: 1.65s
+2025-12-07 12:53:04,144 - INFO - Step 340/495 | Epoch 3 | Batch 11/165 | Loss: 1.3570 | LR: 5.00e-05 | Time: 2.14s
+2025-12-07 12:53:12,827 - INFO - Step 350/495 | Epoch 3 | Batch 21/165 | Loss: 1.3875 | LR: 4.43e-05 | Time: 1.67s
+2025-12-07 12:53:26,267 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000350'}
+2025-12-07 12:53:34,939 - INFO - Step 360/495 | Epoch 3 | Batch 31/165 | Loss: 1.4013 | LR: 3.88e-05 | Time: 1.61s
+2025-12-07 12:53:43,842 - INFO - Step 370/495 | Epoch 3 | Batch 41/165 | Loss: 1.3129 | LR: 3.36e-05 | Time: 1.91s
+2025-12-07 12:53:52,565 - INFO - Step 380/495 | Epoch 3 | Batch 51/165 | Loss: 1.4368 | LR: 2.87e-05 | Time: 1.61s
+2025-12-07 12:54:01,517 - INFO - Step 390/495 | Epoch 3 | Batch 61/165 | Loss: 1.4859 | LR: 2.41e-05 | Time: 1.73s
+2025-12-07 12:54:10,440 - INFO - Step 400/495 | Epoch 3 | Batch 71/165 | Loss: 1.3308 | LR: 1.99e-05 | Time: 1.66s
+2025-12-07 12:54:23,815 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000400'}
+2025-12-07 12:54:32,321 - INFO - Step 410/495 | Epoch 3 | Batch 81/165 | Loss: 1.3319 | LR: 1.60e-05 | Time: 1.73s
+2025-12-07 12:54:40,962 - INFO - Step 420/495 | Epoch 3 | Batch 91/165 | Loss: 1.2523 | LR: 1.26e-05 | Time: 1.69s
+2025-12-07 12:54:49,615 - INFO - Step 430/495 | Epoch 3 | Batch 101/165 | Loss: 1.3242 | LR: 9.49e-06 | Time: 1.61s
+2025-12-07 12:54:58,940 - INFO - Step 440/495 | Epoch 3 | Batch 111/165 | Loss: 1.2651 | LR: 6.82e-06 | Time: 2.23s
+2025-12-07 12:55:07,815 - INFO - Step 450/495 | Epoch 3 | Batch 121/165 | Loss: 1.3277 | LR: 4.59e-06 | Time: 1.88s
+2025-12-07 12:55:21,261 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/step_000450'}
+2025-12-07 12:55:29,770 - INFO - Step 460/495 | Epoch 3 | Batch 131/165 | Loss: 1.4224 | LR: 2.78e-06 | Time: 1.92s
+2025-12-07 12:55:38,726 - INFO - Step 470/495 | Epoch 3 | Batch 141/165 | Loss: 1.4031 | LR: 1.42e-06 | Time: 1.86s
+2025-12-07 12:55:47,685 - INFO - Step 480/495 | Epoch 3 | Batch 151/165 | Loss: 1.2971 | LR: 5.13e-07 | Time: 1.89s
+2025-12-07 12:55:56,341 - INFO - Step 490/495 | Epoch 3 | Batch 161/165 | Loss: 1.6646 | LR: 5.71e-08 | Time: 1.87s
+2025-12-07 12:55:59,636 - INFO - Step 494/495 | Epoch 3 | Batch 165/165 | Loss: 1.1617 | LR: 2.28e-09 | Time: 1.41s
+2025-12-07 12:55:59,637 - INFO - 
+Saving final checkpoint...
+2025-12-07 12:56:23,248 - INFO - Saved checkpoints: {'state_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/weights/final', 'sampler_path': 'tinker://f0e9aad9-0345-5f4d-b467-968034d8db4a:train:0/sampler_weights/final'}
+2025-12-07 12:56:23,250 - INFO - 
+================================================================================
+2025-12-07 12:56:23,250 - INFO - TRAINING COMPLETE
+2025-12-07 12:56:23,250 - INFO - ================================================================================
+2025-12-07 12:56:23,250 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-3epoch
+2025-12-07 12:56:23,250 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-3epoch/checkpoints.jsonl
+2025-12-07 12:56:23,250 - INFO - Total steps: 495
+2025-12-07 12:56:23,250 - INFO - ================================================================================
+
+Epoch 1/3
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Epoch 2/3
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Epoch 3/3
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-3epoch
+Total steps: 495
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 13:03:31,662 - INFO - Loading dataset from: dataset/wmdp_bio_full.json
+2025-12-07 13:03:31,663 - INFO - Detected format: JSONL
+2025-12-07 13:03:31,675 - INFO - Loaded 5300 records
+2025-12-07 13:03:31,675 - INFO - Using specified data format: preformatted
+2025-12-07 13:03:32,158 - INFO - ServiceClient initialized for session 006f975f-c33e-5f38-ad3e-48fbce350860
+2025-12-07 13:03:32,158 - INFO - Creating new training client
+2025-12-07 13:03:43,071 - INFO - Creating TrainingClient for model_id='006f975f-c33e-5f38-ad3e-48fbce350860:train:0'
+2025-12-07 13:03:43,072 - INFO - Loading tokenizer from training client
+2025-12-07 13:03:44,174 - INFO - ================================================================================
+2025-12-07 13:03:44,174 - INFO - TRAINING CONFIGURATION
+2025-12-07 13:03:44,174 - INFO - ================================================================================
+2025-12-07 13:03:44,174 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 13:03:44,174 - INFO - Data format: preformatted
+2025-12-07 13:03:44,174 - INFO - Total examples: 5300
+2025-12-07 13:03:44,174 - INFO - Batch size: 32
+2025-12-07 13:03:44,174 - INFO - Epochs: 5
+2025-12-07 13:03:44,174 - INFO - Batches per epoch: 165
+2025-12-07 13:03:44,174 - INFO - Total steps: 825
+2025-12-07 13:03:44,174 - INFO - Learning rate: 0.0005
+2025-12-07 13:03:44,174 - INFO - LoRA rank: 64
+2025-12-07 13:03:44,174 - INFO - Max seq length: 3000
+2025-12-07 13:03:44,174 - INFO - Warmup steps: 100
+2025-12-07 13:03:44,174 - INFO - Save every: 50 steps
+2025-12-07 13:03:44,174 - INFO - Train on all tokens: True
+2025-12-07 13:03:44,174 - INFO - ================================================================================
+2025-12-07 13:03:44,174 - INFO - 
+Epoch 1/5
+2025-12-07 13:03:45,629 - INFO - Step 0/825 | Epoch 1 | Batch 1/165 | Loss: 4.0210 | LR: 0.00e+00 | Time: 1.45s
+2025-12-07 13:03:54,362 - INFO - Step 10/825 | Epoch 1 | Batch 11/165 | Loss: 2.8821 | LR: 5.00e-05 | Time: 1.75s
+2025-12-07 13:04:03,020 - INFO - Step 20/825 | Epoch 1 | Batch 21/165 | Loss: 2.2923 | LR: 1.00e-04 | Time: 1.65s
+2025-12-07 13:04:12,008 - INFO - Step 30/825 | Epoch 1 | Batch 31/165 | Loss: 2.1715 | LR: 1.50e-04 | Time: 1.61s
+2025-12-07 13:04:21,379 - INFO - Step 40/825 | Epoch 1 | Batch 41/165 | Loss: 1.9193 | LR: 2.00e-04 | Time: 2.09s
+2025-12-07 13:04:29,950 - INFO - Step 50/825 | Epoch 1 | Batch 51/165 | Loss: 1.9545 | LR: 2.50e-04 | Time: 1.58s
+2025-12-07 13:04:44,722 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000050'}
+2025-12-07 13:04:53,282 - INFO - Step 60/825 | Epoch 1 | Batch 61/165 | Loss: 2.0398 | LR: 3.00e-04 | Time: 1.63s
+2025-12-07 13:05:02,036 - INFO - Step 70/825 | Epoch 1 | Batch 71/165 | Loss: 1.6755 | LR: 3.50e-04 | Time: 1.63s
+2025-12-07 13:05:10,941 - INFO - Step 80/825 | Epoch 1 | Batch 81/165 | Loss: 1.8816 | LR: 4.00e-04 | Time: 1.52s
+2025-12-07 13:05:20,520 - INFO - Step 90/825 | Epoch 1 | Batch 91/165 | Loss: 1.9423 | LR: 4.50e-04 | Time: 1.65s
+2025-12-07 13:05:29,724 - INFO - Step 100/825 | Epoch 1 | Batch 101/165 | Loss: 2.1021 | LR: 5.00e-04 | Time: 1.75s
+2025-12-07 13:05:44,496 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000100'}
+2025-12-07 13:05:53,181 - INFO - Step 110/825 | Epoch 1 | Batch 111/165 | Loss: 2.0498 | LR: 5.00e-04 | Time: 1.80s
+2025-12-07 13:06:02,381 - INFO - Step 120/825 | Epoch 1 | Batch 121/165 | Loss: 1.8558 | LR: 4.99e-04 | Time: 1.45s
+2025-12-07 13:06:11,898 - INFO - Step 130/825 | Epoch 1 | Batch 131/165 | Loss: 2.0567 | LR: 4.98e-04 | Time: 2.07s
+2025-12-07 13:06:21,173 - INFO - Step 140/825 | Epoch 1 | Batch 141/165 | Loss: 1.9075 | LR: 4.96e-04 | Time: 1.90s
+2025-12-07 13:06:30,281 - INFO - Step 150/825 | Epoch 1 | Batch 151/165 | Loss: 1.7006 | LR: 4.94e-04 | Time: 1.63s
+2025-12-07 13:06:45,170 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000150'}
+2025-12-07 13:06:54,240 - INFO - Step 160/825 | Epoch 1 | Batch 161/165 | Loss: 1.8932 | LR: 4.92e-04 | Time: 1.83s
+2025-12-07 13:06:57,294 - INFO - 
+Epoch 2/5
+2025-12-07 13:07:03,441 - INFO - Step 170/825 | Epoch 2 | Batch 6/165 | Loss: 1.9022 | LR: 4.89e-04 | Time: 1.80s
+2025-12-07 13:07:12,659 - INFO - Step 180/825 | Epoch 2 | Batch 16/165 | Loss: 1.4783 | LR: 4.85e-04 | Time: 1.87s
+2025-12-07 13:07:22,585 - INFO - Step 190/825 | Epoch 2 | Batch 26/165 | Loss: 1.7188 | LR: 4.81e-04 | Time: 1.65s
+2025-12-07 13:07:31,836 - INFO - Step 200/825 | Epoch 2 | Batch 36/165 | Loss: 1.5110 | LR: 4.77e-04 | Time: 1.92s
+2025-12-07 13:07:46,058 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000200'}
+2025-12-07 13:07:55,259 - INFO - Step 210/825 | Epoch 2 | Batch 46/165 | Loss: 1.6165 | LR: 4.72e-04 | Time: 1.89s
+2025-12-07 13:08:04,575 - INFO - Step 220/825 | Epoch 2 | Batch 56/165 | Loss: 1.5556 | LR: 4.67e-04 | Time: 1.88s
+2025-12-07 13:08:14,167 - INFO - Step 230/825 | Epoch 2 | Batch 66/165 | Loss: 1.3972 | LR: 4.61e-04 | Time: 1.97s
+2025-12-07 13:08:23,012 - INFO - Step 240/825 | Epoch 2 | Batch 76/165 | Loss: 1.7003 | LR: 4.55e-04 | Time: 1.82s
+2025-12-07 13:08:32,512 - INFO - Step 250/825 | Epoch 2 | Batch 86/165 | Loss: 1.7351 | LR: 4.49e-04 | Time: 2.54s
+2025-12-07 13:08:45,853 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000250'}
+2025-12-07 13:08:54,672 - INFO - Step 260/825 | Epoch 2 | Batch 96/165 | Loss: 1.7305 | LR: 4.42e-04 | Time: 2.03s
+2025-12-07 13:09:03,904 - INFO - Step 270/825 | Epoch 2 | Batch 106/165 | Loss: 1.7158 | LR: 4.35e-04 | Time: 1.83s
+2025-12-07 13:09:13,567 - INFO - Step 280/825 | Epoch 2 | Batch 116/165 | Loss: 1.7572 | LR: 4.28e-04 | Time: 1.90s
+2025-12-07 13:09:23,222 - INFO - Step 290/825 | Epoch 2 | Batch 126/165 | Loss: 1.7194 | LR: 4.20e-04 | Time: 2.25s
+2025-12-07 13:09:31,824 - INFO - Step 300/825 | Epoch 2 | Batch 136/165 | Loss: 1.5106 | LR: 4.12e-04 | Time: 1.82s
+2025-12-07 13:09:45,500 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000300'}
+2025-12-07 13:09:54,145 - INFO - Step 310/825 | Epoch 2 | Batch 146/165 | Loss: 1.7281 | LR: 4.03e-04 | Time: 1.79s
+2025-12-07 13:10:02,971 - INFO - Step 320/825 | Epoch 2 | Batch 156/165 | Loss: 1.8407 | LR: 3.95e-04 | Time: 1.86s
+2025-12-07 13:10:10,297 - INFO - 
+Epoch 3/5
+2025-12-07 13:10:11,974 - INFO - Step 330/825 | Epoch 3 | Batch 1/165 | Loss: 1.0746 | LR: 3.86e-04 | Time: 1.67s
+2025-12-07 13:10:20,722 - INFO - Step 340/825 | Epoch 3 | Batch 11/165 | Loss: 0.9512 | LR: 3.77e-04 | Time: 1.69s
+2025-12-07 13:10:29,481 - INFO - Step 350/825 | Epoch 3 | Batch 21/165 | Loss: 0.9323 | LR: 3.67e-04 | Time: 1.61s
+2025-12-07 13:10:43,444 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000350'}
+2025-12-07 13:10:52,018 - INFO - Step 360/825 | Epoch 3 | Batch 31/165 | Loss: 0.9841 | LR: 3.57e-04 | Time: 1.83s
+2025-12-07 13:11:00,892 - INFO - Step 370/825 | Epoch 3 | Batch 41/165 | Loss: 0.9205 | LR: 3.48e-04 | Time: 1.82s
+2025-12-07 13:11:10,004 - INFO - Step 380/825 | Epoch 3 | Batch 51/165 | Loss: 0.9822 | LR: 3.37e-04 | Time: 1.75s
+2025-12-07 13:11:18,827 - INFO - Step 390/825 | Epoch 3 | Batch 61/165 | Loss: 1.0188 | LR: 3.27e-04 | Time: 1.81s
+2025-12-07 13:11:27,885 - INFO - Step 400/825 | Epoch 3 | Batch 71/165 | Loss: 0.9417 | LR: 3.17e-04 | Time: 1.89s
+2025-12-07 13:11:41,331 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000400'}
+2025-12-07 13:11:50,187 - INFO - Step 410/825 | Epoch 3 | Batch 81/165 | Loss: 0.8956 | LR: 3.06e-04 | Time: 1.85s
+2025-12-07 13:12:00,078 - INFO - Step 420/825 | Epoch 3 | Batch 91/165 | Loss: 0.8616 | LR: 2.96e-04 | Time: 1.86s
+2025-12-07 13:12:08,868 - INFO - Step 430/825 | Epoch 3 | Batch 101/165 | Loss: 0.9306 | LR: 2.85e-04 | Time: 1.81s
+2025-12-07 13:12:17,545 - INFO - Step 440/825 | Epoch 3 | Batch 111/165 | Loss: 0.9138 | LR: 2.74e-04 | Time: 1.61s
+2025-12-07 13:12:26,517 - INFO - Step 450/825 | Epoch 3 | Batch 121/165 | Loss: 0.9168 | LR: 2.64e-04 | Time: 1.63s
+2025-12-07 13:12:44,225 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000450'}
+2025-12-07 13:12:53,062 - INFO - Step 460/825 | Epoch 3 | Batch 131/165 | Loss: 1.0216 | LR: 2.53e-04 | Time: 1.74s
+2025-12-07 13:13:02,189 - INFO - Step 470/825 | Epoch 3 | Batch 141/165 | Loss: 0.9991 | LR: 2.42e-04 | Time: 1.71s
+2025-12-07 13:13:11,878 - INFO - Step 480/825 | Epoch 3 | Batch 151/165 | Loss: 0.9404 | LR: 2.31e-04 | Time: 1.86s
+2025-12-07 13:13:20,892 - INFO - Step 490/825 | Epoch 3 | Batch 161/165 | Loss: 1.1219 | LR: 2.20e-04 | Time: 1.84s
+2025-12-07 13:13:36,915 - INFO - 
+Epoch 4/5
+2025-12-07 13:14:12,069 - INFO - Step 500/825 | Epoch 4 | Batch 6/165 | Loss: 0.4736 | LR: 2.10e-04 | Time: 7.87s
+2025-12-07 13:14:38,077 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000500'}
+2025-12-07 13:14:47,236 - INFO - Step 510/825 | Epoch 4 | Batch 16/165 | Loss: 0.4432 | LR: 1.99e-04 | Time: 2.20s
+2025-12-07 13:14:56,240 - INFO - Step 520/825 | Epoch 4 | Batch 26/165 | Loss: 0.4910 | LR: 1.88e-04 | Time: 1.91s
+2025-12-07 13:15:05,036 - INFO - Step 530/825 | Epoch 4 | Batch 36/165 | Loss: 0.4616 | LR: 1.78e-04 | Time: 1.75s
+2025-12-07 13:15:14,283 - INFO - Step 540/825 | Epoch 4 | Batch 46/165 | Loss: 0.4436 | LR: 1.68e-04 | Time: 1.76s
+2025-12-07 13:15:23,207 - INFO - Step 550/825 | Epoch 4 | Batch 56/165 | Loss: 0.4701 | LR: 1.57e-04 | Time: 1.62s
+2025-12-07 13:15:36,978 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000550'}
+2025-12-07 13:15:50,387 - INFO - Step 560/825 | Epoch 4 | Batch 66/165 | Loss: 0.4748 | LR: 1.47e-04 | Time: 6.74s
+2025-12-07 13:16:08,559 - INFO - Step 570/825 | Epoch 4 | Batch 76/165 | Loss: 0.4488 | LR: 1.38e-04 | Time: 2.22s
+2025-12-07 13:16:17,388 - INFO - Step 580/825 | Epoch 4 | Batch 86/165 | Loss: 0.4140 | LR: 1.28e-04 | Time: 1.95s
+2025-12-07 13:16:26,730 - INFO - Step 590/825 | Epoch 4 | Batch 96/165 | Loss: 0.4755 | LR: 1.19e-04 | Time: 1.83s
+2025-12-07 13:16:35,636 - INFO - Step 600/825 | Epoch 4 | Batch 106/165 | Loss: 0.4647 | LR: 1.10e-04 | Time: 1.79s
+2025-12-07 13:16:50,400 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000600'}
+2025-12-07 13:16:59,011 - INFO - Step 610/825 | Epoch 4 | Batch 116/165 | Loss: 0.4520 | LR: 1.01e-04 | Time: 1.81s
+2025-12-07 13:17:07,983 - INFO - Step 620/825 | Epoch 4 | Batch 126/165 | Loss: 0.3860 | LR: 9.23e-05 | Time: 1.86s
+2025-12-07 13:17:16,917 - INFO - Step 630/825 | Epoch 4 | Batch 136/165 | Loss: 0.4759 | LR: 8.41e-05 | Time: 1.89s
+2025-12-07 13:17:50,167 - INFO - Step 640/825 | Epoch 4 | Batch 146/165 | Loss: 0.3973 | LR: 7.61e-05 | Time: 8.27s
+2025-12-07 13:18:01,522 - INFO - Step 650/825 | Epoch 4 | Batch 156/165 | Loss: 0.4473 | LR: 6.85e-05 | Time: 1.85s
+2025-12-07 13:18:16,590 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000650'}
+2025-12-07 13:18:23,507 - INFO - 
+Epoch 5/5
+2025-12-07 13:18:25,323 - INFO - Step 660/825 | Epoch 5 | Batch 1/165 | Loss: 0.2905 | LR: 6.12e-05 | Time: 1.81s
+2025-12-07 13:18:35,034 - INFO - Step 670/825 | Epoch 5 | Batch 11/165 | Loss: 0.2422 | LR: 5.43e-05 | Time: 1.92s
+2025-12-07 13:18:44,351 - INFO - Step 680/825 | Epoch 5 | Batch 21/165 | Loss: 0.2170 | LR: 4.77e-05 | Time: 1.93s
+2025-12-07 13:18:53,744 - INFO - Step 690/825 | Epoch 5 | Batch 31/165 | Loss: 0.2284 | LR: 4.16e-05 | Time: 1.94s
+2025-12-07 13:19:02,515 - INFO - Step 700/825 | Epoch 5 | Batch 41/165 | Loss: 0.2362 | LR: 3.58e-05 | Time: 1.85s
+2025-12-07 13:19:17,604 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000700'}
+2025-12-07 13:19:26,253 - INFO - Step 710/825 | Epoch 5 | Batch 51/165 | Loss: 0.2451 | LR: 3.04e-05 | Time: 1.67s
+2025-12-07 13:19:35,384 - INFO - Step 720/825 | Epoch 5 | Batch 61/165 | Loss: 0.2516 | LR: 2.54e-05 | Time: 1.63s
+2025-12-07 13:19:55,576 - INFO - Step 730/825 | Epoch 5 | Batch 71/165 | Loss: 0.2555 | LR: 2.09e-05 | Time: 6.12s
+2025-12-07 13:20:29,523 - INFO - Step 740/825 | Epoch 5 | Batch 81/165 | Loss: 0.2445 | LR: 1.68e-05 | Time: 1.86s
+2025-12-07 13:20:39,362 - INFO - Step 750/825 | Epoch 5 | Batch 91/165 | Loss: 0.2148 | LR: 1.31e-05 | Time: 2.18s
+2025-12-07 13:20:59,342 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000750'}
+2025-12-07 13:21:08,451 - INFO - Step 760/825 | Epoch 5 | Batch 101/165 | Loss: 0.2582 | LR: 9.85e-06 | Time: 1.97s
+2025-12-07 13:21:18,002 - INFO - Step 770/825 | Epoch 5 | Batch 111/165 | Loss: 0.2452 | LR: 7.07e-06 | Time: 1.84s
+2025-12-07 13:21:27,306 - INFO - Step 780/825 | Epoch 5 | Batch 121/165 | Loss: 0.2565 | LR: 4.74e-06 | Time: 1.85s
+2025-12-07 13:21:36,430 - INFO - Step 790/825 | Epoch 5 | Batch 131/165 | Loss: 0.2166 | LR: 2.87e-06 | Time: 1.82s
+2025-12-07 13:21:45,539 - INFO - Step 800/825 | Epoch 5 | Batch 141/165 | Loss: 0.2261 | LR: 1.47e-06 | Time: 1.73s
+2025-12-07 13:21:59,084 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/step_000800'}
+2025-12-07 13:22:34,891 - INFO - Step 810/825 | Epoch 5 | Batch 151/165 | Loss: 0.2341 | LR: 5.28e-07 | Time: 9.75s
+2025-12-07 13:23:07,641 - INFO - Step 820/825 | Epoch 5 | Batch 161/165 | Loss: 0.2484 | LR: 5.87e-08 | Time: 2.37s
+2025-12-07 13:23:11,260 - INFO - Step 824/825 | Epoch 5 | Batch 165/165 | Loss: 0.2274 | LR: 2.35e-09 | Time: 1.78s
+2025-12-07 13:23:11,260 - INFO - 
+Saving final checkpoint...
+2025-12-07 13:23:36,686 - INFO - Saved checkpoints: {'state_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/weights/final', 'sampler_path': 'tinker://006f975f-c33e-5f38-ad3e-48fbce350860:train:0/sampler_weights/final'}
+2025-12-07 13:23:36,688 - INFO - 
+================================================================================
+2025-12-07 13:23:36,689 - INFO - TRAINING COMPLETE
+2025-12-07 13:23:36,689 - INFO - ================================================================================
+2025-12-07 13:23:36,689 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-highlr
+2025-12-07 13:23:36,689 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-highlr/checkpoints.jsonl
+2025-12-07 13:23:36,689 - INFO - Total steps: 825
+2025-12-07 13:23:36,689 - INFO - ================================================================================
+
+Epoch 1/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Epoch 2/5
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+Epoch 4/5
+
+Saving checkpoint at step 500...
+Checkpoint saved!
+
+
+Saving checkpoint at step 550...
+Checkpoint saved!
+
+
+Saving checkpoint at step 600...
+Checkpoint saved!
+
+
+Saving checkpoint at step 650...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 700...
+Checkpoint saved!
+
+
+Saving checkpoint at step 750...
+Checkpoint saved!
+
+
+Saving checkpoint at step 800...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-highlr
+Total steps: 825
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 13:43:21,981 - INFO - Loading dataset from: dataset/wmdp_bio_full.json
+2025-12-07 13:43:21,982 - INFO - Detected format: JSONL
+2025-12-07 13:43:21,995 - INFO - Loaded 5300 records
+2025-12-07 13:43:21,995 - INFO - Using specified data format: preformatted
+2025-12-07 13:43:22,608 - INFO - ServiceClient initialized for session 5cf89ade-70d3-5453-87a6-d9be6b8da65d
+2025-12-07 13:43:22,608 - INFO - Creating new training client
+2025-12-07 13:43:34,688 - INFO - Creating TrainingClient for model_id='5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0'
+2025-12-07 13:43:34,689 - INFO - Loading tokenizer from training client
+2025-12-07 13:43:35,742 - INFO - ================================================================================
+2025-12-07 13:43:35,742 - INFO - TRAINING CONFIGURATION
+2025-12-07 13:43:35,742 - INFO - ================================================================================
+2025-12-07 13:43:35,742 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 13:43:35,742 - INFO - Data format: preformatted
+2025-12-07 13:43:35,742 - INFO - Total examples: 5300
+2025-12-07 13:43:35,742 - INFO - Batch size: 32
+2025-12-07 13:43:35,742 - INFO - Epochs: 5
+2025-12-07 13:43:35,742 - INFO - Batches per epoch: 165
+2025-12-07 13:43:35,742 - INFO - Total steps: 825
+2025-12-07 13:43:35,742 - INFO - Learning rate: 0.0002
+2025-12-07 13:43:35,742 - INFO - LoRA rank: 64
+2025-12-07 13:43:35,742 - INFO - Max seq length: 3000
+2025-12-07 13:43:35,742 - INFO - Warmup steps: 100
+2025-12-07 13:43:35,742 - INFO - Save every: 50 steps
+2025-12-07 13:43:35,742 - INFO - Train on all tokens: True
+2025-12-07 13:43:35,742 - INFO - ================================================================================
+2025-12-07 13:43:35,743 - INFO - 
+Epoch 1/5
+2025-12-07 13:43:40,825 - INFO - Step 0/825 | Epoch 1 | Batch 1/165 | Loss: 4.0210 | LR: 2.00e-04 | Time: 5.08s
+2025-12-07 13:43:51,491 - INFO - Step 10/825 | Epoch 1 | Batch 11/165 | Loss: 2.1296 | LR: 2.00e-04 | Time: 1.46s
+2025-12-07 13:43:59,867 - INFO - Step 20/825 | Epoch 1 | Batch 21/165 | Loss: 2.0723 | LR: 2.00e-04 | Time: 1.62s
+2025-12-07 13:44:08,610 - INFO - Step 30/825 | Epoch 1 | Batch 31/165 | Loss: 2.0884 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 13:44:17,399 - INFO - Step 40/825 | Epoch 1 | Batch 41/165 | Loss: 1.8957 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 13:44:27,063 - INFO - Step 50/825 | Epoch 1 | Batch 51/165 | Loss: 1.9249 | LR: 2.00e-04 | Time: 1.90s
+2025-12-07 13:44:43,204 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000050'}
+2025-12-07 13:44:52,237 - INFO - Step 60/825 | Epoch 1 | Batch 61/165 | Loss: 2.0174 | LR: 2.00e-04 | Time: 1.98s
+2025-12-07 13:45:01,735 - INFO - Step 70/825 | Epoch 1 | Batch 71/165 | Loss: 1.6597 | LR: 2.00e-04 | Time: 1.64s
+2025-12-07 13:45:11,144 - INFO - Step 80/825 | Epoch 1 | Batch 81/165 | Loss: 1.8785 | LR: 2.00e-04 | Time: 2.54s
+2025-12-07 13:45:19,271 - INFO - Step 90/825 | Epoch 1 | Batch 91/165 | Loss: 1.9274 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 13:45:28,774 - INFO - Step 100/825 | Epoch 1 | Batch 101/165 | Loss: 2.0893 | LR: 2.00e-04 | Time: 2.05s
+2025-12-07 13:45:43,485 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000100'}
+2025-12-07 13:45:51,782 - INFO - Step 110/825 | Epoch 1 | Batch 111/165 | Loss: 2.0309 | LR: 2.00e-04 | Time: 1.64s
+2025-12-07 13:46:00,180 - INFO - Step 120/825 | Epoch 1 | Batch 121/165 | Loss: 1.8233 | LR: 2.00e-04 | Time: 1.59s
+2025-12-07 13:46:08,925 - INFO - Step 130/825 | Epoch 1 | Batch 131/165 | Loss: 2.0451 | LR: 2.00e-04 | Time: 1.72s
+2025-12-07 13:46:17,621 - INFO - Step 140/825 | Epoch 1 | Batch 141/165 | Loss: 1.8842 | LR: 2.00e-04 | Time: 1.81s
+2025-12-07 13:46:26,219 - INFO - Step 150/825 | Epoch 1 | Batch 151/165 | Loss: 1.6629 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 13:46:41,920 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000150'}
+2025-12-07 13:46:50,169 - INFO - Step 160/825 | Epoch 1 | Batch 161/165 | Loss: 1.8565 | LR: 2.00e-04 | Time: 1.91s
+2025-12-07 13:46:52,615 - INFO - 
+Epoch 2/5
+2025-12-07 13:46:58,315 - INFO - Step 170/825 | Epoch 2 | Batch 6/165 | Loss: 1.9295 | LR: 2.00e-04 | Time: 1.52s
+2025-12-07 13:47:06,826 - INFO - Step 180/825 | Epoch 2 | Batch 16/165 | Loss: 1.5061 | LR: 2.00e-04 | Time: 1.59s
+2025-12-07 13:47:15,119 - INFO - Step 190/825 | Epoch 2 | Batch 26/165 | Loss: 1.7548 | LR: 2.00e-04 | Time: 1.53s
+2025-12-07 13:47:24,524 - INFO - Step 200/825 | Epoch 2 | Batch 36/165 | Loss: 1.6444 | LR: 2.00e-04 | Time: 1.81s
+2025-12-07 13:47:38,652 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000200'}
+2025-12-07 13:47:48,035 - INFO - Step 210/825 | Epoch 2 | Batch 46/165 | Loss: 1.6867 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 13:47:57,066 - INFO - Step 220/825 | Epoch 2 | Batch 56/165 | Loss: 1.5916 | LR: 2.00e-04 | Time: 1.81s
+2025-12-07 13:48:05,288 - INFO - Step 230/825 | Epoch 2 | Batch 66/165 | Loss: 1.4705 | LR: 2.00e-04 | Time: 1.58s
+2025-12-07 13:48:13,903 - INFO - Step 240/825 | Epoch 2 | Batch 76/165 | Loss: 1.7460 | LR: 2.00e-04 | Time: 1.61s
+2025-12-07 13:48:22,739 - INFO - Step 250/825 | Epoch 2 | Batch 86/165 | Loss: 1.7491 | LR: 2.00e-04 | Time: 1.68s
+2025-12-07 13:48:39,389 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000250'}
+2025-12-07 13:48:49,107 - INFO - Step 260/825 | Epoch 2 | Batch 96/165 | Loss: 1.7652 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 13:48:57,422 - INFO - Step 270/825 | Epoch 2 | Batch 106/165 | Loss: 1.7015 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 13:49:05,900 - INFO - Step 280/825 | Epoch 2 | Batch 116/165 | Loss: 1.7832 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 13:49:14,349 - INFO - Step 290/825 | Epoch 2 | Batch 126/165 | Loss: 1.7251 | LR: 2.00e-04 | Time: 1.63s
+2025-12-07 13:49:23,388 - INFO - Step 300/825 | Epoch 2 | Batch 136/165 | Loss: 1.4897 | LR: 2.00e-04 | Time: 2.13s
+2025-12-07 13:49:37,185 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000300'}
+2025-12-07 13:49:46,558 - INFO - Step 310/825 | Epoch 2 | Batch 146/165 | Loss: 1.8187 | LR: 2.00e-04 | Time: 1.63s
+2025-12-07 13:49:55,158 - INFO - Step 320/825 | Epoch 2 | Batch 156/165 | Loss: 1.8446 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 13:50:01,825 - INFO - 
+Epoch 3/5
+2025-12-07 13:50:03,451 - INFO - Step 330/825 | Epoch 3 | Batch 1/165 | Loss: 1.3172 | LR: 2.00e-04 | Time: 1.62s
+2025-12-07 13:50:13,347 - INFO - Step 340/825 | Epoch 3 | Batch 11/165 | Loss: 1.1981 | LR: 2.00e-04 | Time: 1.64s
+2025-12-07 13:50:22,868 - INFO - Step 350/825 | Epoch 3 | Batch 21/165 | Loss: 1.2282 | LR: 2.00e-04 | Time: 1.69s
+2025-12-07 13:50:37,058 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000350'}
+2025-12-07 13:50:45,800 - INFO - Step 360/825 | Epoch 3 | Batch 31/165 | Loss: 1.2425 | LR: 2.00e-04 | Time: 2.35s
+2025-12-07 13:50:54,704 - INFO - Step 370/825 | Epoch 3 | Batch 41/165 | Loss: 1.1330 | LR: 2.00e-04 | Time: 1.41s
+2025-12-07 13:51:03,596 - INFO - Step 380/825 | Epoch 3 | Batch 51/165 | Loss: 1.2723 | LR: 2.00e-04 | Time: 1.61s
+2025-12-07 13:51:12,393 - INFO - Step 390/825 | Epoch 3 | Batch 61/165 | Loss: 1.3088 | LR: 2.00e-04 | Time: 1.41s
+2025-12-07 13:51:22,113 - INFO - Step 400/825 | Epoch 3 | Batch 71/165 | Loss: 1.1874 | LR: 2.00e-04 | Time: 1.80s
+2025-12-07 13:51:38,119 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000400'}
+2025-12-07 13:51:47,981 - INFO - Step 410/825 | Epoch 3 | Batch 81/165 | Loss: 1.1667 | LR: 2.00e-04 | Time: 1.54s
+2025-12-07 13:51:56,787 - INFO - Step 420/825 | Epoch 3 | Batch 91/165 | Loss: 1.1131 | LR: 2.00e-04 | Time: 1.60s
+2025-12-07 13:52:06,200 - INFO - Step 430/825 | Epoch 3 | Batch 101/165 | Loss: 1.1806 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 13:52:15,375 - INFO - Step 440/825 | Epoch 3 | Batch 111/165 | Loss: 1.1507 | LR: 2.00e-04 | Time: 1.51s
+2025-12-07 13:52:23,646 - INFO - Step 450/825 | Epoch 3 | Batch 121/165 | Loss: 1.1986 | LR: 2.00e-04 | Time: 1.60s
+2025-12-07 13:52:37,087 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000450'}
+2025-12-07 13:52:45,412 - INFO - Step 460/825 | Epoch 3 | Batch 131/165 | Loss: 1.3165 | LR: 2.00e-04 | Time: 1.76s
+2025-12-07 13:52:53,892 - INFO - Step 470/825 | Epoch 3 | Batch 141/165 | Loss: 1.2896 | LR: 2.00e-04 | Time: 1.60s
+2025-12-07 13:53:02,941 - INFO - Step 480/825 | Epoch 3 | Batch 151/165 | Loss: 1.1704 | LR: 2.00e-04 | Time: 1.82s
+2025-12-07 13:53:11,374 - INFO - Step 490/825 | Epoch 3 | Batch 161/165 | Loss: 1.4488 | LR: 2.00e-04 | Time: 1.67s
+2025-12-07 13:53:13,817 - INFO - 
+Epoch 4/5
+2025-12-07 13:53:20,085 - INFO - Step 500/825 | Epoch 4 | Batch 6/165 | Loss: 0.7773 | LR: 2.00e-04 | Time: 1.59s
+2025-12-07 13:53:33,545 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000500'}
+2025-12-07 13:53:43,368 - INFO - Step 510/825 | Epoch 4 | Batch 16/165 | Loss: 0.7551 | LR: 2.00e-04 | Time: 1.82s
+2025-12-07 13:53:51,782 - INFO - Step 520/825 | Epoch 4 | Batch 26/165 | Loss: 0.8023 | LR: 2.00e-04 | Time: 1.59s
+2025-12-07 13:54:00,775 - INFO - Step 530/825 | Epoch 4 | Batch 36/165 | Loss: 0.7940 | LR: 2.00e-04 | Time: 1.80s
+2025-12-07 13:54:09,529 - INFO - Step 540/825 | Epoch 4 | Batch 46/165 | Loss: 0.7109 | LR: 2.00e-04 | Time: 1.82s
+2025-12-07 13:54:18,115 - INFO - Step 550/825 | Epoch 4 | Batch 56/165 | Loss: 0.7924 | LR: 2.00e-04 | Time: 1.57s
+2025-12-07 13:54:33,147 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000550'}
+2025-12-07 13:54:41,661 - INFO - Step 560/825 | Epoch 4 | Batch 66/165 | Loss: 0.7864 | LR: 2.00e-04 | Time: 1.53s
+2025-12-07 13:54:50,567 - INFO - Step 570/825 | Epoch 4 | Batch 76/165 | Loss: 0.7984 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 13:55:00,112 - INFO - Step 580/825 | Epoch 4 | Batch 86/165 | Loss: 0.7175 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 13:55:08,462 - INFO - Step 590/825 | Epoch 4 | Batch 96/165 | Loss: 0.7951 | LR: 2.00e-04 | Time: 1.50s
+2025-12-07 13:55:17,474 - INFO - Step 600/825 | Epoch 4 | Batch 106/165 | Loss: 0.8520 | LR: 2.00e-04 | Time: 1.67s
+2025-12-07 13:55:31,111 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000600'}
+2025-12-07 13:55:39,413 - INFO - Step 610/825 | Epoch 4 | Batch 116/165 | Loss: 0.8111 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 13:55:47,922 - INFO - Step 620/825 | Epoch 4 | Batch 126/165 | Loss: 0.7171 | LR: 2.00e-04 | Time: 1.68s
+2025-12-07 13:55:56,720 - INFO - Step 630/825 | Epoch 4 | Batch 136/165 | Loss: 0.8107 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 13:56:06,034 - INFO - Step 640/825 | Epoch 4 | Batch 146/165 | Loss: 0.7333 | LR: 2.00e-04 | Time: 1.88s
+2025-12-07 13:56:14,875 - INFO - Step 650/825 | Epoch 4 | Batch 156/165 | Loss: 0.8322 | LR: 2.00e-04 | Time: 1.97s
+2025-12-07 13:56:31,014 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000650'}
+2025-12-07 13:56:37,598 - INFO - 
+Epoch 5/5
+2025-12-07 13:56:39,441 - INFO - Step 660/825 | Epoch 5 | Batch 1/165 | Loss: 0.5084 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 13:56:48,256 - INFO - Step 670/825 | Epoch 5 | Batch 11/165 | Loss: 0.3914 | LR: 2.00e-04 | Time: 1.67s
+2025-12-07 13:56:57,051 - INFO - Step 680/825 | Epoch 5 | Batch 21/165 | Loss: 0.3915 | LR: 2.00e-04 | Time: 1.46s
+2025-12-07 13:57:06,724 - INFO - Step 690/825 | Epoch 5 | Batch 31/165 | Loss: 0.4065 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 13:57:16,490 - INFO - Step 700/825 | Epoch 5 | Batch 41/165 | Loss: 0.4201 | LR: 2.00e-04 | Time: 1.81s
+2025-12-07 13:57:29,811 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000700'}
+2025-12-07 13:57:38,071 - INFO - Step 710/825 | Epoch 5 | Batch 51/165 | Loss: 0.4221 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 13:57:46,638 - INFO - Step 720/825 | Epoch 5 | Batch 61/165 | Loss: 0.4126 | LR: 2.00e-04 | Time: 1.48s
+2025-12-07 13:57:56,224 - INFO - Step 730/825 | Epoch 5 | Batch 71/165 | Loss: 0.4471 | LR: 2.00e-04 | Time: 1.72s
+2025-12-07 13:58:04,938 - INFO - Step 740/825 | Epoch 5 | Batch 81/165 | Loss: 0.4361 | LR: 2.00e-04 | Time: 2.00s
+2025-12-07 13:58:14,555 - INFO - Step 750/825 | Epoch 5 | Batch 91/165 | Loss: 0.4604 | LR: 2.00e-04 | Time: 2.38s
+2025-12-07 13:59:54,449 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000750'}
+2025-12-07 14:00:02,832 - INFO - Step 760/825 | Epoch 5 | Batch 101/165 | Loss: 0.4367 | LR: 2.00e-04 | Time: 1.53s
+2025-12-07 14:00:11,700 - INFO - Step 770/825 | Epoch 5 | Batch 111/165 | Loss: 0.4584 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 14:00:20,201 - INFO - Step 780/825 | Epoch 5 | Batch 121/165 | Loss: 0.5202 | LR: 2.00e-04 | Time: 1.53s
+2025-12-07 14:00:31,041 - INFO - Step 790/825 | Epoch 5 | Batch 131/165 | Loss: 0.3873 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 14:00:40,171 - INFO - Step 800/825 | Epoch 5 | Batch 141/165 | Loss: 0.4529 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 14:00:54,732 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/step_000800'}
+2025-12-07 14:01:04,662 - INFO - Step 810/825 | Epoch 5 | Batch 151/165 | Loss: 0.4655 | LR: 2.00e-04 | Time: 1.51s
+2025-12-07 14:01:15,603 - INFO - Step 820/825 | Epoch 5 | Batch 161/165 | Loss: 0.4423 | LR: 2.00e-04 | Time: 3.24s
+2025-12-07 14:01:20,100 - INFO - Step 824/825 | Epoch 5 | Batch 165/165 | Loss: 0.4836 | LR: 2.00e-04 | Time: 2.63s
+2025-12-07 14:01:20,100 - INFO - 
+Saving final checkpoint...
+2025-12-07 14:01:43,736 - INFO - Saved checkpoints: {'state_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/weights/final', 'sampler_path': 'tinker://5cf89ade-70d3-5453-87a6-d9be6b8da65d:train:0/sampler_weights/final'}
+2025-12-07 14:01:43,737 - INFO - 
+================================================================================
+2025-12-07 14:01:43,738 - INFO - TRAINING COMPLETE
+2025-12-07 14:01:43,738 - INFO - ================================================================================
+2025-12-07 14:01:43,738 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr
+2025-12-07 14:01:43,738 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-constantlr/checkpoints.jsonl
+2025-12-07 14:01:43,738 - INFO - Total steps: 825
+2025-12-07 14:01:43,738 - INFO - ================================================================================
+
+Epoch 1/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Epoch 2/5
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+Epoch 4/5
+
+Saving checkpoint at step 500...
+Checkpoint saved!
+
+
+Saving checkpoint at step 550...
+Checkpoint saved!
+
+
+Saving checkpoint at step 600...
+Checkpoint saved!
+
+
+Saving checkpoint at step 650...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 700...
+Checkpoint saved!
+
+
+Saving checkpoint at step 750...
+Checkpoint saved!
+
+
+Saving checkpoint at step 800...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr
+Total steps: 825
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 14:11:54,668 - INFO - Loading dataset from: dataset/wmdp_bio_retain10.json
+2025-12-07 14:11:54,669 - INFO - Detected format: JSONL
+2025-12-07 14:11:54,678 - INFO - Loaded 4770 records
+2025-12-07 14:11:54,678 - INFO - Using specified data format: preformatted
+2025-12-07 14:11:55,159 - INFO - ServiceClient initialized for session f8f12451-ac82-5b17-be15-811c37dce4d4
+2025-12-07 14:11:55,159 - INFO - Creating new training client
+2025-12-07 14:12:22,166 - INFO - Creating TrainingClient for model_id='f8f12451-ac82-5b17-be15-811c37dce4d4:train:0'
+2025-12-07 14:12:22,168 - INFO - Loading tokenizer from training client
+2025-12-07 14:12:23,235 - INFO - ================================================================================
+2025-12-07 14:12:23,235 - INFO - TRAINING CONFIGURATION
+2025-12-07 14:12:23,235 - INFO - ================================================================================
+2025-12-07 14:12:23,235 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 14:12:23,235 - INFO - Data format: preformatted
+2025-12-07 14:12:23,235 - INFO - Total examples: 4770
+2025-12-07 14:12:23,235 - INFO - Batch size: 32
+2025-12-07 14:12:23,235 - INFO - Epochs: 5
+2025-12-07 14:12:23,235 - INFO - Batches per epoch: 149
+2025-12-07 14:12:23,235 - INFO - Total steps: 745
+2025-12-07 14:12:23,235 - INFO - Learning rate: 0.0002
+2025-12-07 14:12:23,235 - INFO - LoRA rank: 64
+2025-12-07 14:12:23,235 - INFO - Max seq length: 3000
+2025-12-07 14:12:23,235 - INFO - Warmup steps: 100
+2025-12-07 14:12:23,235 - INFO - Save every: 50 steps
+2025-12-07 14:12:23,235 - INFO - Train on all tokens: True
+2025-12-07 14:12:23,235 - INFO - ================================================================================
+2025-12-07 14:12:23,236 - INFO - 
+Epoch 1/5
+2025-12-07 14:12:24,730 - INFO - Step 0/745 | Epoch 1 | Batch 1/149 | Loss: 3.6518 | LR: 2.00e-04 | Time: 1.49s
+2025-12-07 14:12:34,008 - INFO - Step 10/745 | Epoch 1 | Batch 11/149 | Loss: 2.0055 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 14:12:42,765 - INFO - Step 20/745 | Epoch 1 | Batch 21/149 | Loss: 1.9079 | LR: 2.00e-04 | Time: 1.58s
+2025-12-07 14:12:51,734 - INFO - Step 30/745 | Epoch 1 | Batch 31/149 | Loss: 1.8819 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 14:13:00,944 - INFO - Step 40/745 | Epoch 1 | Batch 41/149 | Loss: 1.8777 | LR: 2.00e-04 | Time: 1.81s
+2025-12-07 14:13:10,003 - INFO - Step 50/745 | Epoch 1 | Batch 51/149 | Loss: 2.0249 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 14:13:24,693 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000050'}
+2025-12-07 14:14:07,799 - INFO - Step 60/745 | Epoch 1 | Batch 61/149 | Loss: 1.9662 | LR: 2.00e-04 | Time: 8.74s
+2025-12-07 14:14:30,607 - INFO - Step 70/745 | Epoch 1 | Batch 71/149 | Loss: 1.8735 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 14:14:40,909 - INFO - Step 80/745 | Epoch 1 | Batch 81/149 | Loss: 2.0009 | LR: 2.00e-04 | Time: 1.86s
+2025-12-07 14:14:49,759 - INFO - Step 90/745 | Epoch 1 | Batch 91/149 | Loss: 1.9914 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 14:14:58,691 - INFO - Step 100/745 | Epoch 1 | Batch 101/149 | Loss: 1.7716 | LR: 2.00e-04 | Time: 1.72s
+2025-12-07 14:15:13,251 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000100'}
+2025-12-07 14:15:22,135 - INFO - Step 110/745 | Epoch 1 | Batch 111/149 | Loss: 1.8407 | LR: 2.00e-04 | Time: 1.69s
+2025-12-07 14:15:32,082 - INFO - Step 120/745 | Epoch 1 | Batch 121/149 | Loss: 1.9406 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 14:15:41,147 - INFO - Step 130/745 | Epoch 1 | Batch 131/149 | Loss: 1.9076 | LR: 2.00e-04 | Time: 1.79s
+2025-12-07 14:15:50,182 - INFO - Step 140/745 | Epoch 1 | Batch 141/149 | Loss: 1.8789 | LR: 2.00e-04 | Time: 1.67s
+2025-12-07 14:15:56,577 - INFO - 
+Epoch 2/5
+2025-12-07 14:15:59,278 - INFO - Step 150/745 | Epoch 2 | Batch 2/149 | Loss: 1.7563 | LR: 2.00e-04 | Time: 1.86s
+2025-12-07 14:16:12,502 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000150'}
+2025-12-07 14:16:33,374 - INFO - Step 160/745 | Epoch 2 | Batch 12/149 | Loss: 1.5086 | LR: 2.00e-04 | Time: 3.76s
+2025-12-07 14:16:42,443 - INFO - Step 170/745 | Epoch 2 | Batch 22/149 | Loss: 1.6746 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 14:16:51,485 - INFO - Step 180/745 | Epoch 2 | Batch 32/149 | Loss: 1.6401 | LR: 2.00e-04 | Time: 1.80s
+2025-12-07 14:17:00,556 - INFO - Step 190/745 | Epoch 2 | Batch 42/149 | Loss: 1.8443 | LR: 2.00e-04 | Time: 1.87s
+2025-12-07 14:17:09,792 - INFO - Step 200/745 | Epoch 2 | Batch 52/149 | Loss: 1.3887 | LR: 2.00e-04 | Time: 1.75s
+2025-12-07 14:17:23,596 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000200'}
+2025-12-07 14:17:32,826 - INFO - Step 210/745 | Epoch 2 | Batch 62/149 | Loss: 1.7972 | LR: 2.00e-04 | Time: 1.42s
+2025-12-07 14:17:42,458 - INFO - Step 220/745 | Epoch 2 | Batch 72/149 | Loss: 1.5628 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 14:17:51,954 - INFO - Step 230/745 | Epoch 2 | Batch 82/149 | Loss: 1.6499 | LR: 2.00e-04 | Time: 1.43s
+2025-12-07 14:18:00,829 - INFO - Step 240/745 | Epoch 2 | Batch 92/149 | Loss: 1.7935 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 14:18:11,754 - INFO - Step 250/745 | Epoch 2 | Batch 102/149 | Loss: 1.4454 | LR: 2.00e-04 | Time: 1.93s
+2025-12-07 14:18:26,353 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000250'}
+2025-12-07 14:18:35,478 - INFO - Step 260/745 | Epoch 2 | Batch 112/149 | Loss: 1.6193 | LR: 2.00e-04 | Time: 2.17s
+2025-12-07 14:18:44,044 - INFO - Step 270/745 | Epoch 2 | Batch 122/149 | Loss: 1.7565 | LR: 2.00e-04 | Time: 1.78s
+2025-12-07 14:18:53,084 - INFO - Step 280/745 | Epoch 2 | Batch 132/149 | Loss: 1.5525 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 14:19:03,808 - INFO - Step 290/745 | Epoch 2 | Batch 142/149 | Loss: 1.6407 | LR: 2.00e-04 | Time: 3.84s
+2025-12-07 14:19:09,267 - INFO - 
+Epoch 3/5
+2025-12-07 14:19:12,896 - INFO - Step 300/745 | Epoch 3 | Batch 3/149 | Loss: 1.3761 | LR: 2.00e-04 | Time: 1.83s
+2025-12-07 14:19:26,800 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000300'}
+2025-12-07 14:19:35,507 - INFO - Step 310/745 | Epoch 3 | Batch 13/149 | Loss: 1.0672 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 14:19:44,306 - INFO - Step 320/745 | Epoch 3 | Batch 23/149 | Loss: 1.3649 | LR: 2.00e-04 | Time: 1.63s
+2025-12-07 14:19:53,388 - INFO - Step 330/745 | Epoch 3 | Batch 33/149 | Loss: 1.0883 | LR: 2.00e-04 | Time: 1.75s
+2025-12-07 14:20:02,899 - INFO - Step 340/745 | Epoch 3 | Batch 43/149 | Loss: 1.1667 | LR: 2.00e-04 | Time: 1.70s
+2025-12-07 14:20:13,860 - INFO - Step 350/745 | Epoch 3 | Batch 53/149 | Loss: 1.2305 | LR: 2.00e-04 | Time: 1.79s
+2025-12-07 14:20:30,170 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000350'}
+2025-12-07 14:20:39,672 - INFO - Step 360/745 | Epoch 3 | Batch 63/149 | Loss: 1.0924 | LR: 2.00e-04 | Time: 1.91s
+2025-12-07 14:20:48,869 - INFO - Step 370/745 | Epoch 3 | Batch 73/149 | Loss: 1.2277 | LR: 2.00e-04 | Time: 1.68s
+2025-12-07 14:20:57,589 - INFO - Step 380/745 | Epoch 3 | Batch 83/149 | Loss: 1.1001 | LR: 2.00e-04 | Time: 1.76s
+2025-12-07 14:21:07,156 - INFO - Step 390/745 | Epoch 3 | Batch 93/149 | Loss: 1.2717 | LR: 2.00e-04 | Time: 2.40s
+2025-12-07 14:21:16,449 - INFO - Step 400/745 | Epoch 3 | Batch 103/149 | Loss: 1.1343 | LR: 2.00e-04 | Time: 2.03s
+2025-12-07 14:21:31,294 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000400'}
+2025-12-07 14:21:41,677 - INFO - Step 410/745 | Epoch 3 | Batch 113/149 | Loss: 1.1424 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 14:21:51,797 - INFO - Step 420/745 | Epoch 3 | Batch 123/149 | Loss: 1.1266 | LR: 2.00e-04 | Time: 1.84s
+2025-12-07 14:22:00,652 - INFO - Step 430/745 | Epoch 3 | Batch 133/149 | Loss: 1.0373 | LR: 2.00e-04 | Time: 1.82s
+2025-12-07 14:22:09,352 - INFO - Step 440/745 | Epoch 3 | Batch 143/149 | Loss: 1.2560 | LR: 2.00e-04 | Time: 1.48s
+2025-12-07 14:22:13,888 - INFO - 
+Epoch 4/5
+2025-12-07 14:22:18,855 - INFO - Step 450/745 | Epoch 4 | Batch 4/149 | Loss: 0.7904 | LR: 2.00e-04 | Time: 1.95s
+2025-12-07 14:22:33,728 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000450'}
+2025-12-07 14:22:42,863 - INFO - Step 460/745 | Epoch 4 | Batch 14/149 | Loss: 0.7109 | LR: 2.00e-04 | Time: 1.38s
+2025-12-07 14:22:52,747 - INFO - Step 470/745 | Epoch 4 | Batch 24/149 | Loss: 0.7446 | LR: 2.00e-04 | Time: 2.38s
+2025-12-07 14:23:01,701 - INFO - Step 480/745 | Epoch 4 | Batch 34/149 | Loss: 0.8262 | LR: 2.00e-04 | Time: 1.79s
+2025-12-07 14:23:11,237 - INFO - Step 490/745 | Epoch 4 | Batch 44/149 | Loss: 0.7691 | LR: 2.00e-04 | Time: 1.71s
+2025-12-07 14:23:20,651 - INFO - Step 500/745 | Epoch 4 | Batch 54/149 | Loss: 0.8147 | LR: 2.00e-04 | Time: 2.20s
+2025-12-07 14:23:38,910 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000500'}
+2025-12-07 14:23:47,778 - INFO - Step 510/745 | Epoch 4 | Batch 64/149 | Loss: 0.8864 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 14:23:57,251 - INFO - Step 520/745 | Epoch 4 | Batch 74/149 | Loss: 0.7057 | LR: 2.00e-04 | Time: 1.88s
+2025-12-07 14:24:06,067 - INFO - Step 530/745 | Epoch 4 | Batch 84/149 | Loss: 0.7178 | LR: 2.00e-04 | Time: 1.64s
+2025-12-07 14:24:14,833 - INFO - Step 540/745 | Epoch 4 | Batch 94/149 | Loss: 0.8044 | LR: 2.00e-04 | Time: 1.66s
+2025-12-07 14:24:23,941 - INFO - Step 550/745 | Epoch 4 | Batch 104/149 | Loss: 0.8082 | LR: 2.00e-04 | Time: 1.70s
+2025-12-07 14:24:38,607 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000550'}
+2025-12-07 14:24:47,549 - INFO - Step 560/745 | Epoch 4 | Batch 114/149 | Loss: 0.8226 | LR: 2.00e-04 | Time: 1.91s
+2025-12-07 14:24:56,251 - INFO - Step 570/745 | Epoch 4 | Batch 124/149 | Loss: 0.8233 | LR: 2.00e-04 | Time: 1.74s
+2025-12-07 14:25:06,841 - INFO - Step 580/745 | Epoch 4 | Batch 134/149 | Loss: 0.7759 | LR: 2.00e-04 | Time: 3.38s
+2025-12-07 14:25:15,824 - INFO - Step 590/745 | Epoch 4 | Batch 144/149 | Loss: 0.7657 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 14:25:27,033 - INFO - 
+Epoch 5/5
+2025-12-07 14:25:52,176 - INFO - Step 600/745 | Epoch 5 | Batch 5/149 | Loss: 0.3695 | LR: 2.00e-04 | Time: 5.25s
+2025-12-07 14:26:32,101 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000600'}
+2025-12-07 14:26:40,923 - INFO - Step 610/745 | Epoch 5 | Batch 15/149 | Loss: 0.4626 | LR: 2.00e-04 | Time: 1.76s
+2025-12-07 14:26:49,853 - INFO - Step 620/745 | Epoch 5 | Batch 25/149 | Loss: 0.4056 | LR: 2.00e-04 | Time: 1.88s
+2025-12-07 14:26:58,766 - INFO - Step 630/745 | Epoch 5 | Batch 35/149 | Loss: 0.4406 | LR: 2.00e-04 | Time: 1.87s
+2025-12-07 14:27:07,595 - INFO - Step 640/745 | Epoch 5 | Batch 45/149 | Loss: 0.3981 | LR: 2.00e-04 | Time: 1.82s
+2025-12-07 14:27:16,730 - INFO - Step 650/745 | Epoch 5 | Batch 55/149 | Loss: 0.4078 | LR: 2.00e-04 | Time: 1.79s
+2025-12-07 14:27:31,668 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000650'}
+2025-12-07 14:28:08,219 - INFO - Step 660/745 | Epoch 5 | Batch 65/149 | Loss: 0.4065 | LR: 2.00e-04 | Time: 5.54s
+2025-12-07 14:28:26,238 - INFO - Step 670/745 | Epoch 5 | Batch 75/149 | Loss: 0.4402 | LR: 2.00e-04 | Time: 1.89s
+2025-12-07 14:28:36,046 - INFO - Step 680/745 | Epoch 5 | Batch 85/149 | Loss: 0.4149 | LR: 2.00e-04 | Time: 2.07s
+2025-12-07 14:28:45,340 - INFO - Step 690/745 | Epoch 5 | Batch 95/149 | Loss: 0.3945 | LR: 2.00e-04 | Time: 1.85s
+2025-12-07 14:28:55,069 - INFO - Step 700/745 | Epoch 5 | Batch 105/149 | Loss: 0.4470 | LR: 2.00e-04 | Time: 2.39s
+2025-12-07 14:29:08,663 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/step_000700'}
+2025-12-07 14:29:17,758 - INFO - Step 710/745 | Epoch 5 | Batch 115/149 | Loss: 0.3804 | LR: 2.00e-04 | Time: 2.24s
+2025-12-07 14:29:27,039 - INFO - Step 720/745 | Epoch 5 | Batch 125/149 | Loss: 0.4671 | LR: 2.00e-04 | Time: 1.86s
+2025-12-07 14:29:35,793 - INFO - Step 730/745 | Epoch 5 | Batch 135/149 | Loss: 0.4353 | LR: 2.00e-04 | Time: 1.66s
+2025-12-07 14:29:44,603 - INFO - Step 740/745 | Epoch 5 | Batch 145/149 | Loss: 0.4515 | LR: 2.00e-04 | Time: 1.79s
+2025-12-07 14:29:48,219 - INFO - Step 744/745 | Epoch 5 | Batch 149/149 | Loss: 0.4690 | LR: 2.00e-04 | Time: 1.73s
+2025-12-07 14:29:48,219 - INFO - 
+Saving final checkpoint...
+2025-12-07 14:30:09,693 - INFO - Saved checkpoints: {'state_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/weights/final', 'sampler_path': 'tinker://f8f12451-ac82-5b17-be15-811c37dce4d4:train:0/sampler_weights/final'}
+2025-12-07 14:30:09,695 - INFO - 
+================================================================================
+2025-12-07 14:30:09,695 - INFO - TRAINING COMPLETE
+2025-12-07 14:30:09,695 - INFO - ================================================================================
+2025-12-07 14:30:09,695 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-retain10
+2025-12-07 14:30:09,695 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-constantlr-retain10/checkpoints.jsonl
+2025-12-07 14:30:09,695 - INFO - Total steps: 745
+2025-12-07 14:30:09,695 - INFO - ================================================================================
+
+Epoch 1/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Epoch 2/5
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Epoch 4/5
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+Saving checkpoint at step 500...
+Checkpoint saved!
+
+
+Saving checkpoint at step 550...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 600...
+Checkpoint saved!
+
+
+Saving checkpoint at step 650...
+Checkpoint saved!
+
+
+Saving checkpoint at step 700...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-retain10
+Total steps: 745
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 17:09:43,988 - INFO - Loading dataset from: dataset/wmdp_bio_full.json
+2025-12-07 17:09:43,989 - INFO - Detected format: JSONL
+2025-12-07 17:09:43,999 - INFO - Loaded 5300 records
+2025-12-07 17:09:44,000 - INFO - Using specified data format: preformatted
+2025-12-07 17:09:51,247 - INFO - ServiceClient initialized for session 8201b32f-4895-5a94-96f8-b0cc4442c31c
+2025-12-07 17:09:51,247 - INFO - Creating new training client
+2025-12-07 17:09:59,516 - INFO - Creating TrainingClient for model_id='8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0'
+2025-12-07 17:09:59,518 - INFO - Loading tokenizer from training client
+2025-12-07 17:10:00,980 - INFO - ================================================================================
+2025-12-07 17:10:00,980 - INFO - TRAINING CONFIGURATION
+2025-12-07 17:10:00,980 - INFO - ================================================================================
+2025-12-07 17:10:00,980 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 17:10:00,980 - INFO - Data format: preformatted
+2025-12-07 17:10:00,980 - INFO - Total examples: 5300
+2025-12-07 17:10:00,980 - INFO - Batch size: 32
+2025-12-07 17:10:00,980 - INFO - Epochs: 5
+2025-12-07 17:10:00,980 - INFO - Batches per epoch: 165
+2025-12-07 17:10:00,980 - INFO - Total steps: 825
+2025-12-07 17:10:00,980 - INFO - Learning rate: 0.0001
+2025-12-07 17:10:00,980 - INFO - LoRA rank: 64
+2025-12-07 17:10:00,980 - INFO - Max seq length: 3000
+2025-12-07 17:10:00,980 - INFO - Warmup steps: 100
+2025-12-07 17:10:00,980 - INFO - Save every: 50 steps
+2025-12-07 17:10:00,980 - INFO - Train on all tokens: True
+2025-12-07 17:10:00,980 - INFO - ================================================================================
+2025-12-07 17:10:00,980 - INFO - 
+Epoch 1/5
+2025-12-07 17:10:03,866 - INFO - Step 0/825 | Epoch 1 | Batch 1/165 | Loss: 4.0210 | LR: 1.00e-04 | Time: 2.88s
+2025-12-07 17:10:15,764 - INFO - Step 10/825 | Epoch 1 | Batch 11/165 | Loss: 2.2288 | LR: 1.00e-04 | Time: 3.42s
+2025-12-07 17:10:31,513 - INFO - Step 20/825 | Epoch 1 | Batch 21/165 | Loss: 2.1602 | LR: 1.00e-04 | Time: 2.75s
+2025-12-07 17:10:45,646 - INFO - Step 30/825 | Epoch 1 | Batch 31/165 | Loss: 2.1300 | LR: 1.00e-04 | Time: 2.64s
+2025-12-07 17:10:58,804 - INFO - Step 40/825 | Epoch 1 | Batch 41/165 | Loss: 1.9116 | LR: 1.00e-04 | Time: 2.05s
+2025-12-07 17:11:08,621 - INFO - Step 50/825 | Epoch 1 | Batch 51/165 | Loss: 1.9377 | LR: 1.00e-04 | Time: 2.02s
+2025-12-07 17:11:23,779 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000050'}
+2025-12-07 17:11:35,916 - INFO - Step 60/825 | Epoch 1 | Batch 61/165 | Loss: 2.0354 | LR: 1.00e-04 | Time: 1.85s
+2025-12-07 17:11:47,536 - INFO - Step 70/825 | Epoch 1 | Batch 71/165 | Loss: 1.6717 | LR: 1.00e-04 | Time: 1.87s
+2025-12-07 17:11:57,988 - INFO - Step 80/825 | Epoch 1 | Batch 81/165 | Loss: 1.8870 | LR: 1.00e-04 | Time: 2.04s
+2025-12-07 17:12:10,137 - INFO - Step 90/825 | Epoch 1 | Batch 91/165 | Loss: 1.9250 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 17:12:19,676 - INFO - Step 100/825 | Epoch 1 | Batch 101/165 | Loss: 2.0914 | LR: 1.00e-04 | Time: 1.94s
+2025-12-07 17:12:34,550 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000100'}
+2025-12-07 17:12:46,588 - INFO - Step 110/825 | Epoch 1 | Batch 111/165 | Loss: 2.0284 | LR: 1.00e-04 | Time: 2.74s
+2025-12-07 17:12:57,964 - INFO - Step 120/825 | Epoch 1 | Batch 121/165 | Loss: 1.8231 | LR: 1.00e-04 | Time: 2.82s
+2025-12-07 17:13:07,853 - INFO - Step 130/825 | Epoch 1 | Batch 131/165 | Loss: 2.0476 | LR: 1.00e-04 | Time: 2.17s
+2025-12-07 17:13:18,391 - INFO - Step 140/825 | Epoch 1 | Batch 141/165 | Loss: 1.8823 | LR: 1.00e-04 | Time: 1.76s
+2025-12-07 17:13:27,460 - INFO - Step 150/825 | Epoch 1 | Batch 151/165 | Loss: 1.6626 | LR: 1.00e-04 | Time: 2.03s
+2025-12-07 17:13:42,391 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000150'}
+2025-12-07 17:13:55,874 - INFO - Step 160/825 | Epoch 1 | Batch 161/165 | Loss: 1.8624 | LR: 1.00e-04 | Time: 2.14s
+2025-12-07 17:13:59,730 - INFO - 
+Epoch 2/5
+2025-12-07 17:14:06,413 - INFO - Step 170/825 | Epoch 2 | Batch 6/165 | Loss: 2.0197 | LR: 1.00e-04 | Time: 1.76s
+2025-12-07 17:14:15,794 - INFO - Step 180/825 | Epoch 2 | Batch 16/165 | Loss: 1.5972 | LR: 1.00e-04 | Time: 1.75s
+2025-12-07 17:14:25,988 - INFO - Step 190/825 | Epoch 2 | Batch 26/165 | Loss: 1.8624 | LR: 1.00e-04 | Time: 1.76s
+2025-12-07 17:14:35,512 - INFO - Step 200/825 | Epoch 2 | Batch 36/165 | Loss: 1.7868 | LR: 1.00e-04 | Time: 1.85s
+2025-12-07 17:14:50,782 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000200'}
+2025-12-07 17:15:01,373 - INFO - Step 210/825 | Epoch 2 | Batch 46/165 | Loss: 1.8266 | LR: 1.00e-04 | Time: 1.76s
+2025-12-07 17:15:11,186 - INFO - Step 220/825 | Epoch 2 | Batch 56/165 | Loss: 1.7010 | LR: 1.00e-04 | Time: 1.69s
+2025-12-07 17:15:20,083 - INFO - Step 230/825 | Epoch 2 | Batch 66/165 | Loss: 1.5780 | LR: 1.00e-04 | Time: 1.86s
+2025-12-07 17:15:29,940 - INFO - Step 240/825 | Epoch 2 | Batch 76/165 | Loss: 1.8665 | LR: 1.00e-04 | Time: 1.94s
+2025-12-07 17:15:40,439 - INFO - Step 250/825 | Epoch 2 | Batch 86/165 | Loss: 1.8787 | LR: 1.00e-04 | Time: 3.51s
+2025-12-07 17:15:54,530 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000250'}
+2025-12-07 17:16:06,565 - INFO - Step 260/825 | Epoch 2 | Batch 96/165 | Loss: 1.8855 | LR: 1.00e-04 | Time: 2.77s
+2025-12-07 17:16:18,039 - INFO - Step 270/825 | Epoch 2 | Batch 106/165 | Loss: 1.8021 | LR: 1.00e-04 | Time: 1.91s
+2025-12-07 17:16:29,466 - INFO - Step 280/825 | Epoch 2 | Batch 116/165 | Loss: 1.8752 | LR: 1.00e-04 | Time: 2.19s
+2025-12-07 17:16:42,097 - INFO - Step 290/825 | Epoch 2 | Batch 126/165 | Loss: 1.8205 | LR: 1.00e-04 | Time: 1.78s
+2025-12-07 17:16:51,558 - INFO - Step 300/825 | Epoch 2 | Batch 136/165 | Loss: 1.5955 | LR: 1.00e-04 | Time: 1.77s
+2025-12-07 17:17:05,196 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000300'}
+2025-12-07 17:17:15,558 - INFO - Step 310/825 | Epoch 2 | Batch 146/165 | Loss: 1.9242 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 17:17:26,250 - INFO - Step 320/825 | Epoch 2 | Batch 156/165 | Loss: 1.9422 | LR: 1.00e-04 | Time: 2.86s
+2025-12-07 17:17:35,790 - INFO - 
+Epoch 3/5
+2025-12-07 17:17:37,642 - INFO - Step 330/825 | Epoch 3 | Batch 1/165 | Loss: 1.5455 | LR: 1.00e-04 | Time: 1.85s
+2025-12-07 17:17:50,070 - INFO - Step 340/825 | Epoch 3 | Batch 11/165 | Loss: 1.4607 | LR: 1.00e-04 | Time: 2.40s
+2025-12-07 17:18:01,162 - INFO - Step 350/825 | Epoch 3 | Batch 21/165 | Loss: 1.5117 | LR: 1.00e-04 | Time: 2.18s
+2025-12-07 17:18:16,313 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000350'}
+2025-12-07 17:18:29,512 - INFO - Step 360/825 | Epoch 3 | Batch 31/165 | Loss: 1.5091 | LR: 1.00e-04 | Time: 2.01s
+2025-12-07 17:18:42,585 - INFO - Step 370/825 | Epoch 3 | Batch 41/165 | Loss: 1.4001 | LR: 1.00e-04 | Time: 2.09s
+2025-12-07 17:18:53,634 - INFO - Step 380/825 | Epoch 3 | Batch 51/165 | Loss: 1.5612 | LR: 1.00e-04 | Time: 2.63s
+2025-12-07 17:19:09,624 - INFO - Step 390/825 | Epoch 3 | Batch 61/165 | Loss: 1.5745 | LR: 1.00e-04 | Time: 1.98s
+2025-12-07 17:19:20,695 - INFO - Step 400/825 | Epoch 3 | Batch 71/165 | Loss: 1.4485 | LR: 1.00e-04 | Time: 1.88s
+2025-12-07 17:19:33,054 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000400'}
+2025-12-07 17:19:47,561 - INFO - Step 410/825 | Epoch 3 | Batch 81/165 | Loss: 1.4561 | LR: 1.00e-04 | Time: 2.19s
+2025-12-07 17:19:58,680 - INFO - Step 420/825 | Epoch 3 | Batch 91/165 | Loss: 1.3840 | LR: 1.00e-04 | Time: 2.07s
+2025-12-07 17:20:10,910 - INFO - Step 430/825 | Epoch 3 | Batch 101/165 | Loss: 1.4696 | LR: 1.00e-04 | Time: 2.17s
+2025-12-07 17:20:23,408 - INFO - Step 440/825 | Epoch 3 | Batch 111/165 | Loss: 1.4177 | LR: 1.00e-04 | Time: 2.12s
+2025-12-07 17:20:34,791 - INFO - Step 450/825 | Epoch 3 | Batch 121/165 | Loss: 1.4580 | LR: 1.00e-04 | Time: 3.54s
+2025-12-07 17:20:48,633 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000450'}
+2025-12-07 17:21:04,260 - INFO - Step 460/825 | Epoch 3 | Batch 131/165 | Loss: 1.6016 | LR: 1.00e-04 | Time: 3.24s
+2025-12-07 17:21:16,065 - INFO - Step 470/825 | Epoch 3 | Batch 141/165 | Loss: 1.5690 | LR: 1.00e-04 | Time: 1.70s
+2025-12-07 17:21:28,271 - INFO - Step 480/825 | Epoch 3 | Batch 151/165 | Loss: 1.4264 | LR: 1.00e-04 | Time: 2.54s
+2025-12-07 17:21:40,628 - INFO - Step 490/825 | Epoch 3 | Batch 161/165 | Loss: 1.7778 | LR: 1.00e-04 | Time: 2.15s
+2025-12-07 17:21:43,705 - INFO - 
+Epoch 4/5
+2025-12-07 17:21:53,209 - INFO - Step 500/825 | Epoch 4 | Batch 6/165 | Loss: 1.1597 | LR: 1.00e-04 | Time: 1.82s
+2025-12-07 17:22:06,979 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000500'}
+2025-12-07 17:22:17,561 - INFO - Step 510/825 | Epoch 4 | Batch 16/165 | Loss: 1.2185 | LR: 1.00e-04 | Time: 1.99s
+2025-12-07 17:22:28,874 - INFO - Step 520/825 | Epoch 4 | Batch 26/165 | Loss: 1.2800 | LR: 1.00e-04 | Time: 2.24s
+2025-12-07 17:22:40,698 - INFO - Step 530/825 | Epoch 4 | Batch 36/165 | Loss: 1.2652 | LR: 1.00e-04 | Time: 2.17s
+2025-12-07 17:22:58,760 - INFO - Step 540/825 | Epoch 4 | Batch 46/165 | Loss: 1.0882 | LR: 1.00e-04 | Time: 7.46s
+2025-12-07 17:23:33,220 - INFO - Step 550/825 | Epoch 4 | Batch 56/165 | Loss: 1.2113 | LR: 1.00e-04 | Time: 4.02s
+2025-12-07 17:23:50,288 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000550'}
+2025-12-07 17:24:02,701 - INFO - Step 560/825 | Epoch 4 | Batch 66/165 | Loss: 1.1885 | LR: 1.00e-04 | Time: 2.16s
+2025-12-07 17:24:14,270 - INFO - Step 570/825 | Epoch 4 | Batch 76/165 | Loss: 1.2150 | LR: 1.00e-04 | Time: 2.57s
+2025-12-07 17:24:25,596 - INFO - Step 580/825 | Epoch 4 | Batch 86/165 | Loss: 1.1008 | LR: 1.00e-04 | Time: 3.15s
+2025-12-07 17:24:36,179 - INFO - Step 590/825 | Epoch 4 | Batch 96/165 | Loss: 1.2345 | LR: 1.00e-04 | Time: 2.13s
+2025-12-07 17:25:03,769 - INFO - Step 600/825 | Epoch 4 | Batch 106/165 | Loss: 1.2611 | LR: 1.00e-04 | Time: 3.88s
+2025-12-07 17:25:16,512 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000600'}
+2025-12-07 17:25:30,867 - INFO - Step 610/825 | Epoch 4 | Batch 116/165 | Loss: 1.1946 | LR: 1.00e-04 | Time: 3.45s
+2025-12-07 17:25:43,420 - INFO - Step 620/825 | Epoch 4 | Batch 126/165 | Loss: 1.1233 | LR: 1.00e-04 | Time: 2.30s
+2025-12-07 17:25:56,053 - INFO - Step 630/825 | Epoch 4 | Batch 136/165 | Loss: 1.1598 | LR: 1.00e-04 | Time: 2.56s
+2025-12-07 17:26:07,996 - INFO - Step 640/825 | Epoch 4 | Batch 146/165 | Loss: 1.1510 | LR: 1.00e-04 | Time: 1.95s
+2025-12-07 17:26:21,731 - INFO - Step 650/825 | Epoch 4 | Batch 156/165 | Loss: 1.2462 | LR: 1.00e-04 | Time: 5.73s
+2025-12-07 17:26:35,017 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000650'}
+2025-12-07 17:26:43,755 - INFO - 
+Epoch 5/5
+2025-12-07 17:26:47,302 - INFO - Step 660/825 | Epoch 5 | Batch 1/165 | Loss: 0.9515 | LR: 1.00e-04 | Time: 3.54s
+2025-12-07 17:27:05,017 - INFO - Step 670/825 | Epoch 5 | Batch 11/165 | Loss: 0.7110 | LR: 1.00e-04 | Time: 2.71s
+2025-12-07 17:27:16,793 - INFO - Step 680/825 | Epoch 5 | Batch 21/165 | Loss: 0.7616 | LR: 1.00e-04 | Time: 2.11s
+2025-12-07 17:27:28,123 - INFO - Step 690/825 | Epoch 5 | Batch 31/165 | Loss: 0.7702 | LR: 1.00e-04 | Time: 2.02s
+2025-12-07 17:27:39,933 - INFO - Step 700/825 | Epoch 5 | Batch 41/165 | Loss: 0.8022 | LR: 1.00e-04 | Time: 1.88s
+2025-12-07 17:27:53,181 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000700'}
+2025-12-07 17:28:03,787 - INFO - Step 710/825 | Epoch 5 | Batch 51/165 | Loss: 0.8210 | LR: 1.00e-04 | Time: 1.92s
+2025-12-07 17:28:14,177 - INFO - Step 720/825 | Epoch 5 | Batch 61/165 | Loss: 0.7697 | LR: 1.00e-04 | Time: 2.65s
+2025-12-07 17:28:24,148 - INFO - Step 730/825 | Epoch 5 | Batch 71/165 | Loss: 0.8734 | LR: 1.00e-04 | Time: 2.77s
+2025-12-07 17:28:36,151 - INFO - Step 740/825 | Epoch 5 | Batch 81/165 | Loss: 0.9055 | LR: 1.00e-04 | Time: 1.77s
+2025-12-07 17:28:50,656 - INFO - Step 750/825 | Epoch 5 | Batch 91/165 | Loss: 0.9057 | LR: 1.00e-04 | Time: 4.60s
+2025-12-07 17:29:05,132 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000750'}
+2025-12-07 17:29:14,245 - INFO - Step 760/825 | Epoch 5 | Batch 101/165 | Loss: 0.8729 | LR: 1.00e-04 | Time: 1.97s
+2025-12-07 17:29:24,551 - INFO - Step 770/825 | Epoch 5 | Batch 111/165 | Loss: 0.8251 | LR: 1.00e-04 | Time: 1.99s
+2025-12-07 17:29:39,603 - INFO - Step 780/825 | Epoch 5 | Batch 121/165 | Loss: 0.9929 | LR: 1.00e-04 | Time: 2.27s
+2025-12-07 17:29:53,155 - INFO - Step 790/825 | Epoch 5 | Batch 131/165 | Loss: 0.7106 | LR: 1.00e-04 | Time: 2.08s
+2025-12-07 17:30:03,656 - INFO - Step 800/825 | Epoch 5 | Batch 141/165 | Loss: 0.8390 | LR: 1.00e-04 | Time: 1.91s
+2025-12-07 17:30:17,380 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/step_000800'}
+2025-12-07 17:30:32,007 - INFO - Step 810/825 | Epoch 5 | Batch 151/165 | Loss: 0.9087 | LR: 1.00e-04 | Time: 3.25s
+2025-12-07 17:30:41,919 - INFO - Step 820/825 | Epoch 5 | Batch 161/165 | Loss: 0.8647 | LR: 1.00e-04 | Time: 1.72s
+2025-12-07 17:30:45,415 - INFO - Step 824/825 | Epoch 5 | Batch 165/165 | Loss: 0.8815 | LR: 1.00e-04 | Time: 1.75s
+2025-12-07 17:30:45,415 - INFO - 
+Saving final checkpoint...
+2025-12-07 17:31:08,546 - INFO - Saved checkpoints: {'state_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/weights/final', 'sampler_path': 'tinker://8201b32f-4895-5a94-96f8-b0cc4442c31c:train:0/sampler_weights/final'}
+2025-12-07 17:31:08,548 - INFO - 
+================================================================================
+2025-12-07 17:31:08,549 - INFO - TRAINING COMPLETE
+2025-12-07 17:31:08,549 - INFO - ================================================================================
+2025-12-07 17:31:08,549 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower
+2025-12-07 17:31:08,549 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower/checkpoints.jsonl
+2025-12-07 17:31:08,549 - INFO - Total steps: 825
+2025-12-07 17:31:08,549 - INFO - ================================================================================
+
+Epoch 1/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Epoch 2/5
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+Epoch 4/5
+
+Saving checkpoint at step 500...
+Checkpoint saved!
+
+
+Saving checkpoint at step 550...
+Checkpoint saved!
+
+
+Saving checkpoint at step 600...
+Checkpoint saved!
+
+
+Saving checkpoint at step 650...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 700...
+Checkpoint saved!
+
+
+Saving checkpoint at step 750...
+Checkpoint saved!
+
+
+Saving checkpoint at step 800...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower
+Total steps: 825
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================
+2025-12-07 18:12:54,672 - INFO - Loading dataset from: dataset/wmdp_bio_retain10.json
+2025-12-07 18:12:54,672 - INFO - Detected format: JSONL
+2025-12-07 18:12:54,682 - INFO - Loaded 4770 records
+2025-12-07 18:12:54,682 - INFO - Using specified data format: preformatted
+2025-12-07 18:13:08,376 - INFO - ServiceClient initialized for session 62b22983-c0b7-52a0-b989-72c43056735d
+2025-12-07 18:13:08,376 - INFO - Creating new training client
+2025-12-07 18:13:16,739 - INFO - Creating TrainingClient for model_id='62b22983-c0b7-52a0-b989-72c43056735d:train:0'
+2025-12-07 18:13:16,740 - INFO - Loading tokenizer from training client
+2025-12-07 18:13:22,806 - INFO - ================================================================================
+2025-12-07 18:13:22,807 - INFO - TRAINING CONFIGURATION
+2025-12-07 18:13:22,807 - INFO - ================================================================================
+2025-12-07 18:13:22,807 - INFO - Base model: meta-llama/Llama-3.1-8B-Instruct
+2025-12-07 18:13:22,807 - INFO - Data format: preformatted
+2025-12-07 18:13:22,807 - INFO - Total examples: 4770
+2025-12-07 18:13:22,807 - INFO - Batch size: 32
+2025-12-07 18:13:22,807 - INFO - Epochs: 5
+2025-12-07 18:13:22,807 - INFO - Batches per epoch: 149
+2025-12-07 18:13:22,807 - INFO - Total steps: 745
+2025-12-07 18:13:22,807 - INFO - Learning rate: 0.0001
+2025-12-07 18:13:22,807 - INFO - LoRA rank: 64
+2025-12-07 18:13:22,807 - INFO - Max seq length: 3000
+2025-12-07 18:13:22,807 - INFO - Warmup steps: 100
+2025-12-07 18:13:22,807 - INFO - Save every: 50 steps
+2025-12-07 18:13:22,807 - INFO - Train on all tokens: True
+2025-12-07 18:13:22,807 - INFO - ================================================================================
+2025-12-07 18:13:22,807 - INFO - 
+Epoch 1/5
+2025-12-07 18:13:33,408 - INFO - Step 0/745 | Epoch 1 | Batch 1/149 | Loss: 3.6518 | LR: 1.00e-04 | Time: 10.60s
+2025-12-07 18:14:16,664 - INFO - Step 10/745 | Epoch 1 | Batch 11/149 | Loss: 2.0686 | LR: 1.00e-04 | Time: 4.10s
+2025-12-07 18:14:26,983 - INFO - Step 20/745 | Epoch 1 | Batch 21/149 | Loss: 1.9667 | LR: 1.00e-04 | Time: 1.87s
+2025-12-07 18:14:38,278 - INFO - Step 30/745 | Epoch 1 | Batch 31/149 | Loss: 1.9227 | LR: 1.00e-04 | Time: 2.07s
+2025-12-07 18:14:49,696 - INFO - Step 40/745 | Epoch 1 | Batch 41/149 | Loss: 1.9036 | LR: 1.00e-04 | Time: 2.03s
+2025-12-07 18:15:01,305 - INFO - Step 50/745 | Epoch 1 | Batch 51/149 | Loss: 2.0478 | LR: 1.00e-04 | Time: 2.93s
+2025-12-07 18:15:16,461 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000050'}
+2025-12-07 18:17:43,518 - INFO - Step 60/745 | Epoch 1 | Batch 61/149 | Loss: 1.9874 | LR: 1.00e-04 | Time: 1.86s
+2025-12-07 18:17:53,918 - INFO - Step 70/745 | Epoch 1 | Batch 71/149 | Loss: 1.8792 | LR: 1.00e-04 | Time: 2.96s
+2025-12-07 18:18:06,058 - INFO - Step 80/745 | Epoch 1 | Batch 81/149 | Loss: 1.9986 | LR: 1.00e-04 | Time: 2.36s
+2025-12-07 18:18:18,119 - INFO - Step 90/745 | Epoch 1 | Batch 91/149 | Loss: 1.9928 | LR: 1.00e-04 | Time: 2.83s
+2025-12-07 18:18:40,500 - INFO - Step 100/745 | Epoch 1 | Batch 101/149 | Loss: 1.7698 | LR: 1.00e-04 | Time: 10.69s
+2025-12-07 18:18:54,748 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000100'}
+2025-12-07 18:19:08,844 - INFO - Step 110/745 | Epoch 1 | Batch 111/149 | Loss: 1.8370 | LR: 1.00e-04 | Time: 3.47s
+2025-12-07 18:19:21,061 - INFO - Step 120/745 | Epoch 1 | Batch 121/149 | Loss: 1.9456 | LR: 1.00e-04 | Time: 2.50s
+2025-12-07 18:19:34,646 - INFO - Step 130/745 | Epoch 1 | Batch 131/149 | Loss: 1.9043 | LR: 1.00e-04 | Time: 2.17s
+2025-12-07 18:19:48,111 - INFO - Step 140/745 | Epoch 1 | Batch 141/149 | Loss: 1.8891 | LR: 1.00e-04 | Time: 2.53s
+2025-12-07 18:19:58,343 - INFO - 
+Epoch 2/5
+2025-12-07 18:20:01,551 - INFO - Step 150/745 | Epoch 2 | Batch 2/149 | Loss: 1.8571 | LR: 1.00e-04 | Time: 2.71s
+2025-12-07 18:20:17,844 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000150'}
+2025-12-07 18:20:30,229 - INFO - Step 160/745 | Epoch 2 | Batch 12/149 | Loss: 1.6152 | LR: 1.00e-04 | Time: 2.76s
+2025-12-07 18:20:42,614 - INFO - Step 170/745 | Epoch 2 | Batch 22/149 | Loss: 1.7666 | LR: 1.00e-04 | Time: 1.88s
+2025-12-07 18:20:58,188 - INFO - Step 180/745 | Epoch 2 | Batch 32/149 | Loss: 1.7397 | LR: 1.00e-04 | Time: 2.28s
+2025-12-07 18:21:12,039 - INFO - Step 190/745 | Epoch 2 | Batch 42/149 | Loss: 1.9875 | LR: 1.00e-04 | Time: 2.69s
+2025-12-07 18:21:21,436 - INFO - Step 200/745 | Epoch 2 | Batch 52/149 | Loss: 1.4745 | LR: 1.00e-04 | Time: 1.78s
+2025-12-07 18:21:39,543 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000200'}
+2025-12-07 18:21:52,096 - INFO - Step 210/745 | Epoch 2 | Batch 62/149 | Loss: 1.9155 | LR: 1.00e-04 | Time: 2.54s
+2025-12-07 18:22:07,623 - INFO - Step 220/745 | Epoch 2 | Batch 72/149 | Loss: 1.6576 | LR: 1.00e-04 | Time: 2.46s
+2025-12-07 18:22:21,716 - INFO - Step 230/745 | Epoch 2 | Batch 82/149 | Loss: 1.7619 | LR: 1.00e-04 | Time: 2.22s
+2025-12-07 18:22:35,090 - INFO - Step 240/745 | Epoch 2 | Batch 92/149 | Loss: 1.9219 | LR: 1.00e-04 | Time: 3.39s
+2025-12-07 18:22:47,348 - INFO - Step 250/745 | Epoch 2 | Batch 102/149 | Loss: 1.5675 | LR: 1.00e-04 | Time: 2.88s
+2025-12-07 18:23:01,073 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000250'}
+2025-12-07 18:23:17,161 - INFO - Step 260/745 | Epoch 2 | Batch 112/149 | Loss: 1.7351 | LR: 1.00e-04 | Time: 2.86s
+2025-12-07 18:23:30,299 - INFO - Step 270/745 | Epoch 2 | Batch 122/149 | Loss: 1.8926 | LR: 1.00e-04 | Time: 2.90s
+2025-12-07 18:23:44,804 - INFO - Step 280/745 | Epoch 2 | Batch 132/149 | Loss: 1.6831 | LR: 1.00e-04 | Time: 3.24s
+2025-12-07 18:23:55,839 - INFO - Step 290/745 | Epoch 2 | Batch 142/149 | Loss: 1.7567 | LR: 1.00e-04 | Time: 1.91s
+2025-12-07 18:24:02,619 - INFO - 
+Epoch 3/5
+2025-12-07 18:24:07,630 - INFO - Step 300/745 | Epoch 3 | Batch 3/149 | Loss: 1.7215 | LR: 1.00e-04 | Time: 2.19s
+2025-12-07 18:24:24,079 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000300'}
+2025-12-07 18:24:38,085 - INFO - Step 310/745 | Epoch 3 | Batch 13/149 | Loss: 1.3358 | LR: 1.00e-04 | Time: 2.52s
+2025-12-07 18:24:50,078 - INFO - Step 320/745 | Epoch 3 | Batch 23/149 | Loss: 1.6604 | LR: 1.00e-04 | Time: 2.66s
+2025-12-07 18:25:04,186 - INFO - Step 330/745 | Epoch 3 | Batch 33/149 | Loss: 1.4022 | LR: 1.00e-04 | Time: 3.61s
+2025-12-07 18:25:16,640 - INFO - Step 340/745 | Epoch 3 | Batch 43/149 | Loss: 1.4449 | LR: 1.00e-04 | Time: 2.77s
+2025-12-07 18:25:27,537 - INFO - Step 350/745 | Epoch 3 | Batch 53/149 | Loss: 1.5453 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 18:25:40,353 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000350'}
+2025-12-07 18:25:50,078 - INFO - Step 360/745 | Epoch 3 | Batch 63/149 | Loss: 1.3657 | LR: 1.00e-04 | Time: 1.57s
+2025-12-07 18:25:59,708 - INFO - Step 370/745 | Epoch 3 | Batch 73/149 | Loss: 1.4835 | LR: 1.00e-04 | Time: 2.02s
+2025-12-07 18:26:09,838 - INFO - Step 380/745 | Epoch 3 | Batch 83/149 | Loss: 1.4169 | LR: 1.00e-04 | Time: 1.74s
+2025-12-07 18:26:18,992 - INFO - Step 390/745 | Epoch 3 | Batch 93/149 | Loss: 1.5890 | LR: 1.00e-04 | Time: 1.69s
+2025-12-07 18:26:28,593 - INFO - Step 400/745 | Epoch 3 | Batch 103/149 | Loss: 1.4053 | LR: 1.00e-04 | Time: 2.50s
+2025-12-07 18:26:44,048 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000400'}
+2025-12-07 18:26:55,349 - INFO - Step 410/745 | Epoch 3 | Batch 113/149 | Loss: 1.4079 | LR: 1.00e-04 | Time: 1.79s
+2025-12-07 18:27:08,114 - INFO - Step 420/745 | Epoch 3 | Batch 123/149 | Loss: 1.4323 | LR: 1.00e-04 | Time: 2.56s
+2025-12-07 18:27:20,275 - INFO - Step 430/745 | Epoch 3 | Batch 133/149 | Loss: 1.3406 | LR: 1.00e-04 | Time: 2.10s
+2025-12-07 18:27:32,790 - INFO - Step 440/745 | Epoch 3 | Batch 143/149 | Loss: 1.5671 | LR: 1.00e-04 | Time: 2.09s
+2025-12-07 18:27:39,943 - INFO - 
+Epoch 4/5
+2025-12-07 18:27:56,570 - INFO - Step 450/745 | Epoch 4 | Batch 4/149 | Loss: 1.2526 | LR: 1.00e-04 | Time: 4.59s
+2025-12-07 18:28:09,467 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000450'}
+2025-12-07 18:28:22,121 - INFO - Step 460/745 | Epoch 4 | Batch 14/149 | Loss: 1.1642 | LR: 1.00e-04 | Time: 2.01s
+2025-12-07 18:28:33,578 - INFO - Step 470/745 | Epoch 4 | Batch 24/149 | Loss: 1.1539 | LR: 1.00e-04 | Time: 2.11s
+2025-12-07 18:28:48,970 - INFO - Step 480/745 | Epoch 4 | Batch 34/149 | Loss: 1.2117 | LR: 1.00e-04 | Time: 3.18s
+2025-12-07 18:29:03,710 - INFO - Step 490/745 | Epoch 4 | Batch 44/149 | Loss: 1.1673 | LR: 1.00e-04 | Time: 3.13s
+2025-12-07 18:29:16,287 - INFO - Step 500/745 | Epoch 4 | Batch 54/149 | Loss: 1.2413 | LR: 1.00e-04 | Time: 4.21s
+2025-12-07 18:29:30,141 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000500'}
+2025-12-07 18:29:42,932 - INFO - Step 510/745 | Epoch 4 | Batch 64/149 | Loss: 1.3342 | LR: 1.00e-04 | Time: 2.45s
+2025-12-07 18:29:54,838 - INFO - Step 520/745 | Epoch 4 | Batch 74/149 | Loss: 1.1252 | LR: 1.00e-04 | Time: 2.17s
+2025-12-07 18:30:07,502 - INFO - Step 530/745 | Epoch 4 | Batch 84/149 | Loss: 1.1196 | LR: 1.00e-04 | Time: 2.75s
+2025-12-07 18:30:19,257 - INFO - Step 540/745 | Epoch 4 | Batch 94/149 | Loss: 1.2229 | LR: 1.00e-04 | Time: 1.94s
+2025-12-07 18:30:29,496 - INFO - Step 550/745 | Epoch 4 | Batch 104/149 | Loss: 1.2106 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 18:30:42,525 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000550'}
+2025-12-07 18:30:54,642 - INFO - Step 560/745 | Epoch 4 | Batch 114/149 | Loss: 1.2558 | LR: 1.00e-04 | Time: 2.09s
+2025-12-07 18:31:05,943 - INFO - Step 570/745 | Epoch 4 | Batch 124/149 | Loss: 1.1845 | LR: 1.00e-04 | Time: 1.89s
+2025-12-07 18:31:23,718 - INFO - Step 580/745 | Epoch 4 | Batch 134/149 | Loss: 1.1505 | LR: 1.00e-04 | Time: 3.25s
+2025-12-07 18:31:43,454 - INFO - Step 590/745 | Epoch 4 | Batch 144/149 | Loss: 1.2694 | LR: 1.00e-04 | Time: 2.70s
+2025-12-07 18:31:48,876 - INFO - 
+Epoch 5/5
+2025-12-07 18:31:56,141 - INFO - Step 600/745 | Epoch 5 | Batch 5/149 | Loss: 0.7966 | LR: 1.00e-04 | Time: 1.90s
+2025-12-07 18:32:12,960 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000600'}
+2025-12-07 18:32:26,102 - INFO - Step 610/745 | Epoch 5 | Batch 15/149 | Loss: 0.8925 | LR: 1.00e-04 | Time: 3.42s
+2025-12-07 18:32:37,303 - INFO - Step 620/745 | Epoch 5 | Batch 25/149 | Loss: 0.8604 | LR: 1.00e-04 | Time: 2.06s
+2025-12-07 18:32:49,386 - INFO - Step 630/745 | Epoch 5 | Batch 35/149 | Loss: 0.8475 | LR: 1.00e-04 | Time: 2.79s
+2025-12-07 18:33:02,360 - INFO - Step 640/745 | Epoch 5 | Batch 45/149 | Loss: 0.7929 | LR: 1.00e-04 | Time: 3.34s
+2025-12-07 18:33:13,346 - INFO - Step 650/745 | Epoch 5 | Batch 55/149 | Loss: 0.8837 | LR: 1.00e-04 | Time: 1.90s
+2025-12-07 18:33:28,421 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000650'}
+2025-12-07 18:33:41,742 - INFO - Step 660/745 | Epoch 5 | Batch 65/149 | Loss: 0.7854 | LR: 1.00e-04 | Time: 3.04s
+2025-12-07 18:33:56,747 - INFO - Step 670/745 | Epoch 5 | Batch 75/149 | Loss: 0.9158 | LR: 1.00e-04 | Time: 3.74s
+2025-12-07 18:34:13,079 - INFO - Step 680/745 | Epoch 5 | Batch 85/149 | Loss: 0.8413 | LR: 1.00e-04 | Time: 3.31s
+2025-12-07 18:34:28,694 - INFO - Step 690/745 | Epoch 5 | Batch 95/149 | Loss: 0.7196 | LR: 1.00e-04 | Time: 2.99s
+2025-12-07 18:34:43,013 - INFO - Step 700/745 | Epoch 5 | Batch 105/149 | Loss: 0.7787 | LR: 1.00e-04 | Time: 4.96s
+2025-12-07 18:35:00,045 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/step_000700'}
+2025-12-07 18:37:35,478 - WARNING - Session heartbeat failed for 122.86282120796386 seconds for session 62b22983-c0b7-52a0-b989-72c43056735d. Last exception: APIConnectionError: Connection error..
+Your connection may be unreliable or Tinker is down. If this persists, the session will be terminated.
+2025-12-07 18:37:45,485 - WARNING - Session heartbeat failed for 132.87018954090308 seconds for session 62b22983-c0b7-52a0-b989-72c43056735d. Last exception: APIConnectionError: Connection error..
+Your connection may be unreliable or Tinker is down. If this persists, the session will be terminated.
+2025-12-07 18:38:05,489 - WARNING - Session heartbeat failed for 152.87497666594572 seconds for session 62b22983-c0b7-52a0-b989-72c43056735d. Last exception: APITimeoutError: Request timed out..
+Your connection may be unreliable or Tinker is down. If this persists, the session will be terminated.
+2025-12-07 18:38:25,983 - WARNING - Session heartbeat failed for 173.36972491594497 seconds for session 62b22983-c0b7-52a0-b989-72c43056735d. Last exception: APITimeoutError: Request timed out..
+Your connection may be unreliable or Tinker is down. If this persists, the session will be terminated.
+2025-12-07 18:39:52,354 - INFO - Step 710/745 | Epoch 5 | Batch 115/149 | Loss: 0.8340 | LR: 1.00e-04 | Time: 3.39s
+2025-12-07 18:40:03,860 - INFO - Step 720/745 | Epoch 5 | Batch 125/149 | Loss: 0.9430 | LR: 1.00e-04 | Time: 3.38s
+2025-12-07 18:40:14,925 - INFO - Step 730/745 | Epoch 5 | Batch 135/149 | Loss: 0.8277 | LR: 1.00e-04 | Time: 1.87s
+2025-12-07 18:40:25,105 - INFO - Step 740/745 | Epoch 5 | Batch 145/149 | Loss: 0.8472 | LR: 1.00e-04 | Time: 1.75s
+2025-12-07 18:40:29,325 - INFO - Step 744/745 | Epoch 5 | Batch 149/149 | Loss: 0.9522 | LR: 1.00e-04 | Time: 2.41s
+2025-12-07 18:40:29,325 - INFO - 
+Saving final checkpoint...
+2025-12-07 18:40:51,243 - INFO - Saved checkpoints: {'state_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/weights/final', 'sampler_path': 'tinker://62b22983-c0b7-52a0-b989-72c43056735d:train:0/sampler_weights/final'}
+2025-12-07 18:40:51,245 - INFO - 
+================================================================================
+2025-12-07 18:40:51,245 - INFO - TRAINING COMPLETE
+2025-12-07 18:40:51,245 - INFO - ================================================================================
+2025-12-07 18:40:51,245 - INFO - Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower-retain10
+2025-12-07 18:40:51,245 - INFO - Checkpoint tracking: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower-retain10/checkpoints.jsonl
+2025-12-07 18:40:51,245 - INFO - Total steps: 745
+2025-12-07 18:40:51,245 - INFO - ================================================================================
+
+Epoch 1/5
+
+Saving checkpoint at step 50...
+Checkpoint saved!
+
+
+Saving checkpoint at step 100...
+Checkpoint saved!
+
+
+Epoch 2/5
+
+Saving checkpoint at step 150...
+Checkpoint saved!
+
+
+Saving checkpoint at step 200...
+Checkpoint saved!
+
+
+Saving checkpoint at step 250...
+Checkpoint saved!
+
+
+Epoch 3/5
+
+Saving checkpoint at step 300...
+Checkpoint saved!
+
+
+Saving checkpoint at step 350...
+Checkpoint saved!
+
+
+Saving checkpoint at step 400...
+Checkpoint saved!
+
+
+Epoch 4/5
+
+Saving checkpoint at step 450...
+Checkpoint saved!
+
+
+Saving checkpoint at step 500...
+Checkpoint saved!
+
+
+Saving checkpoint at step 550...
+Checkpoint saved!
+
+
+Epoch 5/5
+
+Saving checkpoint at step 600...
+Checkpoint saved!
+
+
+Saving checkpoint at step 650...
+Checkpoint saved!
+
+
+Saving checkpoint at step 700...
+Checkpoint saved!
+
+
+ Saving final checkpoint...
+
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Checkpoints: checkpoints/Llama-3.1-8b-wmdp-constantlr-slower-retain10
+Total steps: 745
+
+Checkpoint files saved:
+  - State checkpoints: step_NNNNNN/ (for resuming)
+  - Final sampler: final/ (for inference)
+  - Tracking file: checkpoints.jsonl
+================================================================================

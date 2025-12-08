@@ -358,6 +358,7 @@ async def finetune_model(
     base_url: Optional[str],
     resume: bool,
     train_on_all: bool,
+    constant_lr: bool,
 ):
     """
     Async fine-tuning with pipelining for optimal clock cycle utilization.
@@ -480,14 +481,16 @@ async def finetune_model(
         for batch_idx in range(start_batch, n_batches_per_epoch):
             batch_start_time = time.time()
             
-            # Learning rate schedule (warmup + cosine)
-            if global_step < warmup_steps:
+            # Learning rate schedule
+            if constant_lr:
+                current_lr = learning_rate
+            elif global_step < warmup_steps:
                 lr_mult = global_step / warmup_steps
+                current_lr = learning_rate * lr_mult
             else:
                 progress = (global_step - warmup_steps) / (total_steps - warmup_steps)
                 lr_mult = max(0.0, 0.5 * (1.0 + math.cos(progress * math.pi)))
-            
-            current_lr = learning_rate * lr_mult
+                current_lr = learning_rate * lr_mult
             
             # Get batch
             batch_start = batch_idx * batch_size
@@ -688,6 +691,7 @@ def main():
     parser.add_argument('--base_url', type=str, default=None)
     parser.add_argument('--resume', action='store_true')
     parser.add_argument('--train_on_all', action='store_true', default=True)
+    parser.add_argument('--constant_lr', action='store_true')
     
     args = parser.parse_args()
     
